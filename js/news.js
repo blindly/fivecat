@@ -1,5 +1,5 @@
-$(document).ready() {
-    newsblurAPI = "http://www.newsblur.com/reader/river_stories&page=1,2";
+document.addEventListener('DOMContentLoaded', function () {
+    var newsblurAPI = "http://www.newsblur.com/reader/river_stories&page=1,2";
     $.getJSON(newsblurAPI, function (json) {
 
         var stories = json.stories;
@@ -13,11 +13,11 @@ $(document).ready() {
             a.href = link;
             var domain = a.hostname;
 
-            var favicon = "<img src='http://www.google.com/s2/favicons?domain=" + domain + "'/>";
+            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='http://www.google.com/s2/favicons?domain=" + domain + "'/>";
 
-            var article = "<div class='article'>" + favicon + "<a class='title' target='_blank' href='" + link + "'>" + title + "</a></div>";
+            var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
 
             $('#news').append(article);
         });
     });
-}
+}, false);
