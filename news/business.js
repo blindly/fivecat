@@ -1,10 +1,8 @@
     google.load("feeds", "1");
 
     function initialize() {
-        var feeds = ['http://feeds.feedburner.com/FavoriteBrowser',
-            'https://vivaldi.net/blogs/teamblog?format=feed&type=rss',
-            'https://blog.mozilla.org/feed/',
-            'http://blogs.opera.com/desktop/feed'];
+        var feeds = ['http://www.marketwatch.com/rss/topstories',
+            'http://www.marketwatch.com/rss/marketpulse'];
 
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);

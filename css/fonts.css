@@ -1,0 +1,21 @@
+body {
+    font-size: 14px !important;
+}
+@font-face {
+    font-family: 'Times-Italic';
+    src: url('../fonts/Times-Italic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Antonio-Regular';
+    src: url('../fonts/Antonio-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Georgia Italic';
+    src: url('../fonts/Georgia Italic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
