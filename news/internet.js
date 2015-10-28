@@ -1,9 +1,7 @@
     google.load("feeds", "1");
 
     function initialize() {
-        var feeds = [
-            'https://upvoted.com/feed/'
-            ];
+        var feeds = ['https://upvoted.com/feed/'];
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);
             feed.load(function (result) {
