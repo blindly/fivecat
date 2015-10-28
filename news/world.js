@@ -2,6 +2,7 @@
 
     function initialize() {
         var feeds = ['http://feeds.bbci.co.uk/news/rss.xml',
+                    'https://www.reddit.com/r/worldnews/hot.rss',
                     "http://feeds.bbci.co.uk/news/world/rss.xml"];
 
         feeds.forEach(function (entry) {
