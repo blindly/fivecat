@@ -7,7 +7,7 @@
             'http://blogs.opera.com/desktop/feed',
             'http://feeds.feedburner.com/PuppetLabs',
             'http://blog.docker.com/feed/',
-            'https://about.gitlab.com/atom.xml'
+            'https://about.gitlab.com/atom.xml',
             'http://www.vmwareblogs.com/rss.xml?flag=2'];
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);
