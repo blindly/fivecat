@@ -2,6 +2,8 @@
 
     function initialize() {
         var feeds = ['http://www.marketwatch.com/rss/topstories',
+            'http://feeds.reuters.com/reuters/businessNews?format=xml',
+            'http://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
             'http://www.marketwatch.com/rss/marketpulse'];
 
         feeds.forEach(function (entry) {
