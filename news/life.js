@@ -2,12 +2,15 @@
 
     function initialize() {
         var feeds = [
-              'http://feeds.feedburner.com/PuppetLabs',
-              'http://blog.docker.com/feed/',
-              'https://about.gitlab.com/atom.xml',
-              'http://www.vmwareblogs.com/rss.xml?flag=2',
-              'http://feeds.feedburner.com/wmpoweruser',
-            ];
+                    "http://feeds.gawker.com/lifehacker/excerpts.xml",
+                    "http://zenhabits.net/feed/",
+                    "http://feeds.feedburner.com/Workawesome",
+                    "http://feeds.feedburner.com/Addictivetips",
+                    "http://feeds.feedburner.com/getrichslowly",
+                    "http://feeds.lifehack.org/Lifehack",
+                    "http://feeds.feedburner.com/thesimpledollar",
+                    ];
+
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);
             feed.load(function (result) {

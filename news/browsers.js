@@ -2,11 +2,10 @@
 
     function initialize() {
         var feeds = [
-              'http://feeds.feedburner.com/PuppetLabs',
-              'http://blog.docker.com/feed/',
-              'https://about.gitlab.com/atom.xml',
-              'http://www.vmwareblogs.com/rss.xml?flag=2',
-              'http://feeds.feedburner.com/wmpoweruser',
+              'http://feeds.feedburner.com/FavoriteBrowser',
+              'https://vivaldi.net/blogs/teamblog?format=feed&type=rss',
+              'https://blog.mozilla.org/feed/',
+              'http://blogs.opera.com/desktop/feed'
             ];
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);

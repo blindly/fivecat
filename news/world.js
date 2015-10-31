@@ -1,9 +1,12 @@
     google.load("feeds", "1");
 
     function initialize() {
-        var feeds = ['http://feeds.bbci.co.uk/news/rss.xml',
+        var feeds = [
+                    'http://feeds.bbci.co.uk/news/rss.xml',
                     'https://www.reddit.com/r/worldnews/hot.rss',
-                    "http://feeds.bbci.co.uk/news/world/rss.xml"];
+                    'http://feeds.bbci.co.uk/news/world/rss.xml',
+                    'http://feeds.feedburner.com/BreakingDefense'
+                    ];
 
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);

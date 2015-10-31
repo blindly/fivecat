@@ -7,7 +7,9 @@
         {href: 'business.html', text: 'Business'},
         {href: 'world.html', text: 'World'},
         {href: 'technology.html', text: 'Tech'},
-        {href: 'internet.html', text: 'Internet'}
+        {href: 'browsers.html', text: 'Web Browsers'},
+        {href: 'internet.html', text: 'Internet'},
+        {href: 'life.html', text: 'Life'}
     ];
 
     // A few variables for use later
