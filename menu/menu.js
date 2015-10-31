@@ -3,7 +3,7 @@
     // All items we'd like to add
     var navItems = [
         {href: 'index.html', text: 'Recent'},
-        {href: 'hn.html', text: 'Hacker News'},
+        {href: 'hn.html', text: 'Ycombinator'},
         {href: 'business.html', text: 'Business'},
         {href: 'world.html', text: 'World'},
         {href: 'technology.html', text: 'Tech'},
