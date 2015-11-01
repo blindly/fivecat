@@ -4,9 +4,8 @@
         var feeds = [
                     'http://feeds.feedburner.com/co/TbcL',
                     'http://feeds.feedburner.com/homelandsecuritynewswire/rss',
-                    'http://www.huffingtonpost.com/tag/cybersecurity/feed/
-                    ];
-
+                    'http://www.huffingtonpost.com/tag/cybersecurity/feed/'
+            ];
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);
             feed.load(function (result) {
