@@ -7,6 +7,8 @@
               'https://about.gitlab.com/atom.xml',
               'http://www.vmwareblogs.com/rss.xml?flag=2',
               'http://feeds.feedburner.com/wmpoweruser',
+              'http://blog.atom.io/feed.xml',
+              'blogs.msdn.com/b/vscode/rss.aspx'
             ];
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);
