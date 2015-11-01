@@ -6,6 +6,7 @@
         {href: 'hn', text: 'Ycombinator'},
         {href: 'business', text: 'Business'},
         {href: 'world', text: 'World'},
+        {href: 'security', text: 'Security'},
         {href: 'technology', text: 'Tech'},
         {href: 'browsers', text: 'Web Browsers'},
         {href: 'internet', text: 'Internet'},

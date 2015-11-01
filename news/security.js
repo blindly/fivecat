@@ -2,9 +2,9 @@
 
     function initialize() {
         var feeds = [
-                    'http://n4g.com/rss/news?channel=pc&sort=latest',
-                    'http://feeds.ign.com/ign/pc-all',
-                    'http://www.engadget.com/tag/@gaming/rss.xml'
+                    'http://feeds.feedburner.com/co/TbcL',
+                    'http://feeds.feedburner.com/homelandsecuritynewswire/rss',
+                    'http://www.huffingtonpost.com/tag/cybersecurity/feed/
                     ];
 
         feeds.forEach(function (entry) {
