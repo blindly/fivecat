@@ -2,16 +2,16 @@
 
     // All items we'd like to add
     var navItems = [
-        {href: 'index', text: 'Recent'},
-        {href: 'hn', text: 'Ycombinator'},
-        {href: 'business', text: 'Business'},
-        {href: 'world', text: 'World'},
-        {href: 'security', text: 'Security'},
-        {href: 'technology', text: 'Tech'},
-        {href: 'browsers', text: 'Web Browsers'},
-        {href: 'internet', text: 'Internet'},
-        {href: 'gaming', text: 'Gaming'},
-        {href: 'life', text: 'Life'}
+        {href: 'index', text: '#recent'},
+        {href: 'hn', text: '#hn'},
+        {href: 'business', text: '#business'},
+        {href: 'world', text: '#world'},
+        {href: 'security', text: '#cyber'},
+        {href: 'technology', text: '#tech'},
+        {href: 'browsers', text: '#browser'},
+        {href: 'internet', text: '#online'},
+        {href: 'gaming', text: '#games'},
+        {href: 'life', text: '#life'}
     ];
 
     // A few variables for use later
