@@ -1,10 +1,12 @@
     google.load("feeds", "1");
 
     function initialize() {
-        var feeds = ['http://www.marketwatch.com/rss/topstories',
+        var feeds = [
+            'http://www.marketwatch.com/rss/topstories',
             'http://feeds.reuters.com/reuters/businessNews?format=xml',
             'http://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
-            'http://www.marketwatch.com/rss/marketpulse'];
+            'http://www.marketwatch.com/rss/marketpulse'
+        ];
 
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);

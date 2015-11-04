@@ -1,9 +1,13 @@
     google.load("feeds", "1");
 
     function initialize() {
-        var feeds = ['http://feeds.feedburner.com/PuppetLabs',
+        var feeds = [
+            'http://feeds.feedburner.com/PuppetLabs',
             'http://blog.docker.com/feed/',
-            'http://www.vmwareblogs.com/rss.xml?flag=2'];
+            'http://www.vmwareblogs.com/rss.xml?flag=2',
+            'http://blog.brackets.io/feed/',
+            'https://www.chef.io/blog/feed/'
+        ];
 
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);

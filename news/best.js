@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     var newsAPI = "https://www.reddit.com/r/bestof/hot.json";
 
     $.getJSON(newsAPI, function (json) {
