@@ -9,7 +9,8 @@
               'http://feeds.feedburner.com/wmpoweruser',
               'http://blog.atom.io/feed.xml',
               'http://blogs.msdn.com/b/vscode/rss.aspx',
-              'https://godevops.de/feed/'
+              'https://godevops.de/feed/',
+              'http://feeds.feedburner.com/planetpuppet'
             ];
         feeds.forEach(function (entry) {
             var feed = new google.feeds.Feed(entry);
