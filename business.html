@@ -38,8 +38,6 @@
                 <h2>business news</h2>
 
                 <div id="news">
-                    <!-- <a class="title" href="single.html">
-                        <img style='width: 20px !important; margin-bottom: 0 !important' src='http://www.google.com/s2/favicons?domain=google.com' /> DeltaMaker – The new kid on the block An Elegant 3D Printer and a new wicked ass thing</a> -->
                 </div>
 
             </section>
@@ -48,8 +46,16 @@
             </div>
     </section>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="news/business.js"></script>
+    <script type="text/javascript" src="app/rss.js"></script>
     <script type="text/javascript" src="menu/menu.js"></script>
+
+    <script type="text/javascript">
+      var feeds = fetchFeeds('business');
+      console.log(feeds);
+
+      google.load("feeds", "1");
+      google.setOnLoadCallback(initialize(feeds));
+    </script>
 </body>
 
 </html>

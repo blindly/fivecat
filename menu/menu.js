@@ -6,10 +6,8 @@
         {href: 'hn', text: 'hn'},
         {href: 'business', text: 'business'},
         {href: 'world', text: 'world'},
-        {href: 'security', text: 'cyber'},
         {href: 'technology', text: 'tech'},
         {href: 'browsers', text: 'browser'},
-        {href: 'internet', text: 'online'},
         {href: 'gaming', text: 'games'},
         {href: 'life', text: 'life'}
     ];

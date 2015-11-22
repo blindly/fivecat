@@ -1,6 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
+function loadReddit(url)
+{
+  document.addEventListener('DOMContentLoaded', function () {
 
-    var newsAPI = "https://www.reddit.com/r/hackernews/hot.json";
+    var newsAPI = url;
 
     $.getJSON(newsAPI, function (json) {
 
@@ -25,4 +27,5 @@ document.addEventListener('DOMContentLoaded', function () {
             $('#news').append(article);
         });
     });
-}, false);
+  }, false);
+}
