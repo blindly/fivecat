@@ -4,12 +4,6 @@
     var navItems = [
         {href: 'index', text: 'recent'},
         {href: 'hn', text: 'hn'},
-        {href: 'business', text: 'business'},
-        {href: 'world', text: 'world'},
-        {href: 'technology', text: 'tech'},
-        {href: 'browsers', text: 'browser'},
-        {href: 'gaming', text: 'games'},
-        {href: 'life', text: 'life'}
     ];
 
     // A few variables for use later
