@@ -781,7 +781,7 @@ input[type="button"]:disabled,
 #header {
     background: #fff;
     background-color: #000;
-    color: #555f66;
+    color: #fff;
     cursor: default;
     height: 3em;
     left: 0;
@@ -831,7 +831,7 @@ input[type="button"]:disabled,
     -o-transition: color 0.2s ease-in-out;
     -ms-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
-    color: #555f66;
+    /* color: #555f66; */
     display: inline-block;
     text-decoration: none;
 }
