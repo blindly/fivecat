@@ -11,7 +11,7 @@ function loadReddit(url)
         console.log(children);
 
         $.each(children, function (key, value) {
-            var text = children[key]['data']['title'] + children[key]['data']['selftext'];
+            var text = '* ' + children[key]['data']['title'] + ' ' + children[key]['data']['selftext'];
             var article = "<div class='article'>" + text + "</div>";
 
             $('#news').append(article);
