@@ -56,6 +56,10 @@ function fetchFeeds(name) {
             "http://feeds.ign.com/ign/pc-all",
             "http://www.engadget.com/tag/@gaming/rss.xml"
           ],
+          "opensource": [
+            "http://opensource.com/feed",
+            "http://distrowatch.com/news/dw.xml"
+          ],
           "life": [
             "http://feeds.gawker.com/lifehacker/excerpts.xml",
             "http://zenhabits.net/feed/",
