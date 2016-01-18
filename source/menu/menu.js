@@ -8,7 +8,7 @@
         {href: 'gaming.html', text: 'gaming'},
         {href: 'browsers.html', text: 'browser'},
         {href: 'opensource.html', text: 'opensource'},
-        {href: 'tech.html', text: 'tech'},
+        {href: 'technology.html', text: 'tech'},
         {href: 'jokes.html', text: 'jokes'},
         {href: 'life.html', text: 'life'},
     ];
