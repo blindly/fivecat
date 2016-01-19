@@ -27,6 +27,27 @@ function initialize(feeds) {
     });
 }
 
+function showContent(feeds) {
+    feeds.forEach(function (entry) {
+        var feed = new google.feeds.Feed(entry);
+        feed.load(function (result) {
+            if (!result.error) {
+                for (var num = 0; num < result.feed.entries.length; num++) {
+                    var entry = result.feed.entries[num];
+                    var title = entry.title;
+                    var description = entry.content;
+
+                    console.log(entry);
+
+                    var article = "<div class='article'>" + title + description + "</div>";
+
+                    $('#news').append(article);
+                }
+            }
+        });
+    });
+}
+
 function fetchFeeds(name) {
   var data = {
       "feeds": {
@@ -58,7 +79,7 @@ function fetchFeeds(name) {
           ],
           "opensource": [
             "http://opensource.com/feed",
-            "http://distrowatch.com/news/dw.xml"
+            "http://distrowatch.com/news/dww.xml"
           ],
           "life": [
             "http://feeds.gawker.com/lifehacker/excerpts.xml",
@@ -68,6 +89,9 @@ function fetchFeeds(name) {
             "http://feeds.feedburner.com/getrichslowly",
             "http://feeds.lifehack.org/Lifehack",
             "http://feeds.feedburner.com/thesimpledollar"
+          ],
+          "words": [
+            "http://feeds.feedblitz.com/dutch-word-of-the-day"
           ],
           "world": [
             "http://feeds.bbci.co.uk/news/rss.xml",

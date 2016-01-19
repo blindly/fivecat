@@ -1,0 +1,15 @@
+---
+title: word of the day
+layout: layout
+---
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="app/rss.js"></script>
+
+<script type="text/javascript">
+  var feeds = fetchFeeds('words');
+  console.log(feeds);
+
+  google.load("feeds", "1");
+  google.setOnLoadCallback(showContent(feeds));
+</script>

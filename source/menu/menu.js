@@ -4,6 +4,7 @@
     var navItems = [
         {href: 'index.html', text: 'recent'},
         {href: 'hn.html', text: 'hn'},
+        {href: 'words.html', text: 'words'},
         {href: 'business.html', text: 'business'},
         {href: 'gaming.html', text: 'gaming'},
         {href: 'browsers.html', text: 'browser'},
