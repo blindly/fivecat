@@ -1,0 +1,40 @@
+---
+title: weather
+layout: layout
+---
+
+<div class="wrapper">
+    <span class="result"></span>
+</div>
+
+jQuery(document).ready(function ($) {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            console.log(latitude + ' ' + longitude);
+
+            function getWeather(){
+                var weatherUrl = "http://api.wunderground.com/api/29c251a00f892e4b/conditions/lang:en/q/" + latitude + "," + longitude + ".json";
+                console.log(weatherUrl);
+                $.ajax({
+                    url: weatherUrl,
+                    dataType: "jsonp",
+                    success: function (parsed_json) {
+                        var location = parsed_json['current_observation']['display_location']['city'];
+                        var temp_c = parsed_json['current_observation']['temp_c'];
+                        $('.result').html("В " + location + " location: <span class='weather-number'>" + temp_c + " °С</span>");
+                    }
+                });
+            }
+
+            getWeather();
+
+        }, function(){
+            console.log("Вы запретили доступ к GPS");
+        });
+
+    } else {
+        console.log("Ваш браузер сраное говно");
+    }
+});
