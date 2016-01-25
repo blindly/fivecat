@@ -1,6 +1,108 @@
 ---
-title: recent news
+title: weather
 layout: layout
 ---
 
-<script type="text/javascript" src="app/recent.js"></script>
+<style>
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+ 	background-size: cover;
+  background-position: center;
+	text-align: center;
+}
+
+.bg{
+	background-color: rgba(255,255,255,0.25);
+	border-radius: 10px;
+}
+
+.message{
+	display: block;
+}
+	.title{
+		margin-top: 3%;
+		margin-left: 2%;
+		text-shadow: 1px 1px 10px white;
+	}
+		.title .contrast{
+			color: lightblue;
+		}
+		.greeting{
+			text-shadow: 1px 1px 10px white;
+		}
+
+.forecast{
+	margin-top: 5%;
+	height: 10%;
+	width: 150px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px;
+}
+	.day-text{
+		display: inline-block;
+		vertical-align: top;
+		width: 60%;
+		margin-top: 5%;
+	}
+	.forecast .icon{
+		margin-top: -5%;
+		width: 40%;
+	}
+</style>
+
+		<div class="0 forecast bg">
+		</div>
+		<div class="1 forecast bg">
+		</div>
+		<div class="2 forecast bg">
+		</div>
+		<div class="3 forecast bg">
+		</div>
+		<div class="4 forecast bg">
+		</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    var forecast;
+    getLocation();
+    // get location and pass to show function
+    function getLocation(){
+      if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(getForecast);
+      }
+      else{
+        $(".message").innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    // using openweather api
+    // get the forecast and show it
+    function getForecast(location){
+      $.get("http://api.openweathermap.org/data/2.5/forecast/daily?lat="+location.coords.latitude+"&lon="+location.coords.longitude+"&cnt=5&mode=json&units=metric&APPID=454420fd33898ae52c01398a3bc759c3", function(output){
+          // set applicable css
+          for(var i = 0; i < output.list.length; i++){
+            var d = new Date(output.list[i].dt * 1000);
+            var day = d.getDay();
+            var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            $("."+i).append(
+              "<div class='day-text'>"+
+              "<p>"+ weekDays[day] +"</p>"+
+              "<p>"+Math.round(output.list[i].temp.day)+"&deg;F</p>"+
+              "</div>"+
+              "<img class='icon' src='img/icons/"+output.list[i].weather[0].icon+".svg'>"
+            );
+          }
+          // displaying location
+          $(".location").text(output.city.name);
+          console.log("Weather ID", output.list[0].weather[0].icon);
+        }
+      );
+    };
+  });
+</script>
