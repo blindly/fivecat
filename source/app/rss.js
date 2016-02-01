@@ -78,8 +78,8 @@ function fetchFeeds(name) {
             "http://www.engadget.com/tag/@gaming/rss.xml"
           ],
           "opensource": [
-            "http://opensource.com/feed",
-            "http://distrowatch.com/news/dww.xml"
+            "http://www.linuxinsider.com/perl/syndication/rssfull.pl",
+            "http://www.technewsworld.com/perl/syndication/rssfull.pl"
           ],
           "life": [
             "http://feeds.gawker.com/lifehacker/excerpts.xml",
