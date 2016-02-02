@@ -3,9 +3,46 @@ title: hacker news
 layout: layout
 ---
 
-<script type="text/javascript" src="app/reddit.js"></script>
-
+<!-- <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> -->
 <script>
-  var url = "https://www.reddit.com/r/hackernews/hot.json";
-  loadReddit(url);
-</script>
+  $.ajax({
+  url:"https://www.kimonolabs.com/api/2i16osow?apikey=05vSqzPxaZDsONBle39dUp6l2ojTuEo7",
+  crossDomain: true,
+  dataType: "jsonp",
+  success: function (response) {
+
+        var children = response['results']['collection1'];
+
+        //console.log(children);
+
+        $.each(children, function (key, value) {
+            
+            console.log( children[key]['title']['text'] );
+
+            var title_text = children[key]['title']['text'];
+            var title_href = children[key]['title']['href'];
+            var comments_text = children[key]['comments']['text'];
+            var comments_href = children[key]['comments']['href'];
+            
+            console.log(title_text);
+            
+            var a = document.createElement('a');
+            a.href = title_href;
+            var domain = a.hostname;
+
+            var instapaper = 'https://www.instapaper.com/text?u=';
+            link = instapaper + title_href;
+
+            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='http://www.google.com/s2/favicons?domain=" + domain + "'/>";
+
+            var article = "<div class='article'><a class='title' target='_blank' href='" + title_href + "'>" + favicon + title_text + "</a></div>";
+
+            $('#news').append(article);
+            
+        });
+
+  },
+  error: function (xhr, status) {
+    //handle errors
+  }
+});</script>

@@ -61,9 +61,9 @@ function fetchFeeds(name) {
             "http://feeds.feedburner.com/planetpuppet"
           ],
           "browsers": [
-            "http://feeds.feedburner.com/FavoriteBrowser",
+            //"http://feeds.feedburner.com/FavoriteBrowser",
             "https://vivaldi.net/blogs/teamblog?format=feed&type=rss",
-            "https://blog.mozilla.org/feed/",
+            //"https://blog.mozilla.org/feed/",
             "http://blogs.opera.com/desktop/feed"
           ],
           "business": [
