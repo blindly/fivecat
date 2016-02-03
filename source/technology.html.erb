@@ -3,13 +3,28 @@ title: tech news
 layout: layout
 ---
 
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="app/rss.js"></script>
-
 <script type="text/javascript">
-  var feeds = fetchFeeds('technology');
-  console.log(feeds);
 
-  google.load("feeds", "1");
-  google.setOnLoadCallback(initialize(feeds));
+function showFeed(data){
+    if(data.status == 'ok'){
+        for(var i=0;i<data.items.length;++i){
+
+            link = data.items[i].link;
+            title = data.items[i].title;
+            
+            var a = document.createElement('a');
+            a.href = link;
+            var domain = a.hostname;
+            
+            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='http://www.google.com/s2/favicons?domain=" + domain + "'/>";
+                    
+            var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
+            $('#news').append(article);
+            
+        }
+    }
+}
+
 </script>
+<script type="text/javascript" src="http://rss2json.com/api.json?callback=showFeed&rss_url=http://www.rssmix.com/u/8175496/rss.xml"></script>
+</body>

@@ -3,13 +3,72 @@ title: browser news
 layout: layout
 ---
 
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="app/rss.js"></script>
 
 <script type="text/javascript">
-  var feeds = fetchFeeds('browsers');
-  console.log(feeds);
 
-  google.load("feeds", "1");
-  google.setOnLoadCallback(initialize(feeds));
+    function getParmsFromURLHash(url) {
+        var parms = {}, pieces, parts, i;
+        var hash = url.lastIndexOf("#");
+        if (hash !== -1) {
+            // isolate just the hash value
+            url = url.slice(hash + 1);
+        }
+        var question = url.indexOf("?");
+        if (question !== -1) {
+            url = url.slice(question + 1);
+            pieces = url.split("&");
+            for (i = 0; i < pieces.length; i++) {
+                parts = pieces[i].split("=");
+                if (parts.length < 2) {
+                    parts.push("");
+                }
+                parms[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1]);
+            }
+        }
+        return parms;
+    }
+
+    var content = document.getElementById('news');
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function(){
+            if (xhr.readyState==4 && xhr.status==200)
+            {
+                var data = JSON.parse(xhr.responseText);
+                if(data.status == 'ok'){
+
+                    var output;
+
+                    for(var i=0;i<data.items.length;++i){
+
+                        link = data.items[i].link;
+                        
+                        // Bing links are redirected but redirection doesn't work
+	                    link = decodeURIComponent(link); 
+                        link = link.replace(/amp;/g, '');
+                        parms = getParmsFromURLHash(link);
+                        
+                        if(parms.url){
+                            link = parms.url;
+                        }
+                        
+                        title = data.items[i].title;
+                        
+                        var a = document.createElement('a');
+                        a.href = link;
+                        var domain = a.hostname;
+                        
+                        var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='http://www.google.com/s2/favicons?domain=" + domain + "'/>";
+                                
+                        var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
+                        $('#news').append(article);
+                        
+                    }
+                }
+            }
+        };
+    xhr.open('GET','http://rss2json.com/api.json?rss_url=http://mix.chimpfeedr.com/e4df6-Web-Browsers',true);
+    xhr.send();
+
 </script>

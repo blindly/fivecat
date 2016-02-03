@@ -5,14 +5,14 @@
         {href: 'index.html', text: 'weather'},
         {href: 'recent.html', text: 'recent'},
         {href: 'hn.html', text: 'hn'},
-        {href: 'words.html', text: 'words'},
-        {href: 'business.html', text: 'business'},
-        {href: 'gaming.html', text: 'gaming'},
         {href: 'browsers.html', text: 'browser'},
-        {href: 'opensource.html', text: 'opensource'},
+        //{href: 'business.html', text: 'business'},
+        //{href: 'gaming.html', text: 'gaming'},
+        //{href: 'opensource.html', text: 'opensource'},
         {href: 'technology.html', text: 'tech'},
         {href: 'jokes.html', text: 'jokes'},
         {href: 'life.html', text: 'life'},
+        {href: 'words.html', text: 'words'},
     ];
 
     // A few variables for use later

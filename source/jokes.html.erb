@@ -3,9 +3,27 @@ title: jokes
 layout: layout
 ---
 
-<script type="text/javascript" src="app/reddit_selftext.js"></script>
-
 <script>
   var url = "https://www.reddit.com/r/jokes/hot.json";
-  loadReddit(url);
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    var newsAPI = url;
+    $.getJSON(newsAPI, function (json) {
+        var children = json.data.children;
+        console.log(children);
+        $.each(children, function (key, value) {
+            var score = children[key]['data']['score'];
+            
+            if ( score > 100 ){
+                //var text = '* ' + children[key]['data']['title'] + ' - ' + children[key]['data']['selftext'];
+                var title = children[key]['data']['title'];
+                var text = children[key]['data']['selftext'];
+                var article = "<div class='article'>- " + title + ".  " + text + "</div>";
+
+                $('#news').append(article);
+            }
+        });
+    });
+  }, false);
 </script>
