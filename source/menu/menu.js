@@ -10,6 +10,7 @@
         //{href: 'gaming.html', text: 'gaming'},
         //{href: 'opensource.html', text: 'opensource'},
         {href: 'technology.html', text: 'tech'},
+        {href: 'internet.html', text: 'net'},
         {href: 'jokes.html', text: 'jokes'},
         {href: 'life.html', text: 'life'},
         {href: 'words.html', text: 'words'},

@@ -9,18 +9,11 @@ function showFeed(data){
     if(data.status == 'ok'){
         for(var i=0;i<data.items.length;++i){
 
-            link = data.items[i].link;
-            title = data.items[i].title;
-            
-            var a = document.createElement('a');
-            a.href = link;
-            var domain = a.hostname;
-            
-            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='http://www.google.com/s2/favicons?domain=" + domain + "'/>";
-
-            var instapaper = 'https://www.instapaper.com/text?u=';
-            link = instapaper + link;
-                                
+            var link = data.items[i].link;
+            var title = data.items[i].title;
+            link = instapaperIt(link);
+            var favicon_img = generateFavicon(link);
+            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
             var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
             $('#news').append(article);
             

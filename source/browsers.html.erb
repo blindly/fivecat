@@ -3,31 +3,7 @@ title: browser news
 layout: layout
 ---
 
-
 <script type="text/javascript">
-
-    function getParmsFromURLHash(url) {
-        var parms = {}, pieces, parts, i;
-        var hash = url.lastIndexOf("#");
-        if (hash !== -1) {
-            // isolate just the hash value
-            url = url.slice(hash + 1);
-        }
-        var question = url.indexOf("?");
-        if (question !== -1) {
-            url = url.slice(question + 1);
-            pieces = url.split("&");
-            for (i = 0; i < pieces.length; i++) {
-                parts = pieces[i].split("=");
-                if (parts.length < 2) {
-                    parts.push("");
-                }
-                parms[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1]);
-            }
-        }
-        return parms;
-    }
-
     var content = document.getElementById('news');
 
     var xhr = new XMLHttpRequest();
@@ -54,16 +30,9 @@ layout: layout
                         }
                         
                         title = data.items[i].title;
-                        
-                        var a = document.createElement('a');
-                        a.href = link;
-                        var domain = a.hostname;
-                        
-                        var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='http://www.google.com/s2/favicons?domain=" + domain + "'/>";
-
-                        var instapaper = 'https://www.instapaper.com/text?u=';
-                        link = instapaper + link;
-                                            
+                        link = instapaperIt(link);
+                        var favicon_img = generateFavicon(link);
+                        var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";          
                         var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
                         $('#news').append(article);
                         

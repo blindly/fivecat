@@ -24,17 +24,11 @@ layout: layout
             var comments_text = children[key]['comments']['text'];
             var comments_href = children[key]['comments']['href'];
             
-            console.log(title_text);
+            title_href = instapaperIt(title_href);
             
-            var a = document.createElement('a');
-            a.href = title_href;
-            var domain = a.hostname;
+            var favicon_img = generateFavicon(title_href);
 
-            var instapaper = 'https://www.instapaper.com/text?u=';
-            link = instapaper + title_href;
-
-            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='http://www.google.com/s2/favicons?domain=" + domain + "'/>";
-
+            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
             var article = "<div class='article'><a class='title' target='_blank' href='" + title_href + "'>" + favicon + title_text + "</a></div>";
 
             $('#news').append(article);
