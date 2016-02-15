@@ -24,9 +24,9 @@ function generateFavicon(link){
     var a = document.createElement('a');
     a.href = link;
     var domain = a.hostname;
-    
+
     var favicon = "http://www.google.com/s2/favicons?domain=" + domain;
-    
+
     return favicon;
 }
 
@@ -34,4 +34,16 @@ function instapaperIt(link){
     var instapaper = 'https://www.instapaper.com/text?u=';
     link = instapaper + link;
     return link;
+}
+
+function bingIt(words){
+  var bing = 'https://www.bing.com/search?q=';
+  bing = bing + words;
+  return bing;
+}
+
+function googleIt(words){
+  var google = 'https://www.google.com/search?client=opera&q=';
+  google = google + words;
+  return google;
 }

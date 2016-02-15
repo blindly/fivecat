@@ -5,6 +5,7 @@
         {href: 'index.html', text: 'start'},
         {href: 'recent.html', text: 'recent'},
         {href: 'hn.html', text: 'hn'},
+        {href: 'trends.html', text: 'trending'},
         {href: 'browsers.html', text: 'browser'},
         //{href: 'business.html', text: 'business'},
         //{href: 'gaming.html', text: 'gaming'},
