@@ -37,13 +37,13 @@ function instapaperIt(link){
 }
 
 function bingIt(words){
-  var bing = 'https://www.bing.com/search?q=';
-  bing = bing + words;
+  var bing = "https://www.bing.com/search?q=";
+  bing = bing + encodeURI(words);
   return bing;
 }
 
 function googleIt(words){
-  var google = 'https://www.google.com/search?client=opera&q=';
-  google = google + words;
+  var google = "https://www.google.com/search?client=opera&q=";
+  google = google + encodeURI(words);
   return google;
 }
