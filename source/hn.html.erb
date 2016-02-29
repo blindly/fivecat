@@ -3,39 +3,24 @@ title: hacker news
 layout: layout
 ---
 
-<!-- <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> -->
-<script>
-  $.ajax({
-  url:"https://www.kimonolabs.com/api/2i16osow?apikey=05vSqzPxaZDsONBle39dUp6l2ojTuEo7",
-  crossDomain: true,
-  dataType: "jsonp",
-  success: function (response) {
+<script type="text/javascript">
 
-        var children = response['results']['collection1'];
+function showFeed(data){
+    if(data.status == 'ok'){
+        for(var i=0;i<data.items.length;++i){
 
-        //console.log(children);
-
-        $.each(children, function (key, value) {
-            
-            console.log( children[key]['title']['text'] );
-
-            var title_text = children[key]['title']['text'];
-            var title_href = children[key]['title']['href'];
-            var comments_text = children[key]['comments']['text'];
-            var comments_href = children[key]['comments']['href'];
-            
-            var favicon_img = generateFavicon(title_href);
-            title_href = instapaperIt(title_href);
-
+            var link = data.items[i].link;
+            var title = data.items[i].title;
+            var favicon_img = generateFavicon(link);
+            link = instapaperIt(link);
             var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
-            var article = "<div class='article'><a class='title' target='_blank' href='" + title_href + "'>" + favicon + title_text + "</a></div>";
-
+            var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
             $('#news').append(article);
-            
-        });
 
-  },
-  error: function (xhr, status) {
-    //handle errors
-  }
-});</script>
+        }
+    }
+}
+
+</script>
+<script type="text/javascript" src="http://rss2json.com/api.json?callback=showFeed&rss_url=https://news.ycombinator.com/rss"></script>
+</body>
