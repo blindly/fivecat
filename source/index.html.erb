@@ -259,12 +259,39 @@ layout: layout
         getLocation();
         // get location and pass to show function
         function getLocation() {
+            /*
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(getForecast);
                 } else {
                     $(".message").innerHTML = "Geolocation is not supported by this browser.";
                 }
             }
+            */
+            
+            if (navigator.geolocation) {
+
+                var vm = this;
+                navigator.geolocation.getCurrentPosition(function(position)
+                {
+                    var geolocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    var circle = new google.maps.Circle({
+                        center: geolocation,
+                        radius: position.coords.accuracy
+                    });
+
+                    vm.autocomplete.setBounds(circle.getBounds());
+                    
+                    getForecast(position);
+                });
+            }
+            else {
+                    $(".message").innerHTML = "Geolocation is not supported by this browser.";
+            }
+            
             // using openweather api
             // get the forecast and show it
         function getForecast(location) {
