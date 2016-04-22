@@ -13,16 +13,16 @@ layout: layout
         var children = json.data.children;
         console.log(children);
         $.each(children, function (key, value) {
-            var score = children[key]['data']['score'];
-            
-            if ( score > 100 ){
-                //var text = '* ' + children[key]['data']['title'] + ' - ' + children[key]['data']['selftext'];
-                var title = children[key]['data']['title'];
-                var text = children[key]['data']['selftext'];
-                var article = "<div class='article'>- " + title + "</div>";
 
+            var title = children[key]['data']['title'];
+
+            if ( title.substring(0, 3) == "LPT" ) {
+                title = title.replace("LPT: ");
+                var article = "<div class='article'>- " + title + "</div>";
                 $('#news').append(article);
+
             }
+
         });
     });
   }, false);
