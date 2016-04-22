@@ -7,6 +7,7 @@
         {href: 'hn.html', text: 'hn'},
         //{href: 'trends.html', text: 'trending'},
         {href: 'browsers.html', text: 'browser'},
+        {href: 'lifeprotips.html', text: 'lifePro'},
         //{href: 'business.html', text: 'business'},
         //{href: 'gaming.html', text: 'gaming'},
         //{href: 'opensource.html', text: 'opensource'},
