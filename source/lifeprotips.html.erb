@@ -17,7 +17,7 @@ layout: layout
             var title = children[key]['data']['title'];
 
             if ( title.substring(0, 3) == "LPT" ) {
-                title = title.replace("LPT: ");
+                title = title.replace("LPT: ", "");
                 var article = "<div class='article'>- " + title + "</div>";
                 $('#news').append(article);
 
