@@ -3,6 +3,13 @@ title: life pro tips
 layout: layout
 ---
 
+<style>
+div::first-letter {
+    font-weight: bold;
+    color: red;
+}
+</style>
+
 <script>
   var url = "https://www.reddit.com/r/lifeprotips/hot.json";
 
@@ -13,16 +20,18 @@ layout: layout
         var children = json.data.children;
         console.log(children);
         $.each(children, function (key, value) {
-
-            var title = children[key]['data']['title'];
-
-            if ( title.substring(0, 3) == "LPT" ) {
-                title = title.replace("LPT: ", "");
-                var article = "<div class='article'>- " + title + "</div>";
-                $('#news').append(article);
-
+            var score = children[key]['data']['score'];    
+            if ( score > 50 ){
+                var title = children[key]['data']['title'];
+                if ( title.substring(0, 3) == "LPT" ) {
+                    if ( title.substring(4, 11) != "Request" ) {
+                        title = title.replace("LPT: ", "");
+                        var article = "<div class='article'>" + title + "</div>";
+                        $('#news').append(article);
+                    }
+                }
+            
             }
-
         });
     });
   }, false);
