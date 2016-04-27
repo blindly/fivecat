@@ -1,0 +1,5 @@
+.article::first-letter {
+    font-weight: bold;
+    color: #629DD1;
+    text-transform: capitalize;
+}
