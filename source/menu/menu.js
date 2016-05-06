@@ -3,7 +3,8 @@
     // All items we'd like to add
     var navItems = [
         {href: 'index.html', text: 'recent'},
-        {href: 'hn.html', text: 'hn'},
+        //{href: 'hn.html', text: 'hn'},
+        {href: 'vc.html', text: 'vc'},
         //{href: 'trends.html', text: 'trending'},
         {href: 'browsers.html', text: 'browser'},
         {href: 'lifeprotips.html', text: 'lifePro'},

@@ -98,6 +98,10 @@ function fetchFeeds(name) {
             "http://feeds.feedblitz.com/dutch-word-of-the-day",
             "http://feeds.feedblitz.com/korean-word-of-the-day"
           ],
+          "venturecapital": [
+              "https://www.producthunt.com/feed.atom",
+              "https://news.ycombinator.com/rss"
+          ],
           "world": [
             "http://feeds.bbci.co.uk/news/rss.xml",
             "https://www.reddit.com/r/worldnews/hot.rss",
