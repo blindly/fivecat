@@ -95,7 +95,8 @@ function fetchFeeds(name) {
             "http://feeds.feedburner.com/thesimpledollar"
           ],
           "words": [
-            "http://feeds.feedblitz.com/dutch-word-of-the-day"
+            "http://feeds.feedblitz.com/dutch-word-of-the-day",
+            "http://feeds.feedblitz.com/korean-word-of-the-day"
           ],
           "world": [
             "http://feeds.bbci.co.uk/news/rss.xml",
