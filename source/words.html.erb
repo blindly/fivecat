@@ -1,11 +1,13 @@
 ---
-title: word of the day
+title: words of the day
 layout: layout
 ---
 
-<!--
-<div id="widget" style="width:540px;height:450px;margin:0 auto;"><iframe src="http://www.innovativelanguage.com/widgets/wotd/embed.php?language=Dutch&type=large&bg=%23FFFFFF&content=%23000&header=%23FF6600&highlight=%23F9F9FA&opacity=1&scrollbg=%2300CAED&sound=%2300ACED&text=%2300ACED&quiz=N" width="540" height="450" frameborder="0" scrolling="no"></iframe><div style="font:bold 9px/16px Verdana; padding:0; height:16px;"><div style="float:left; margin:0;"><a href="http://www.dutchpod101.com/dutch-phrases/" target="_parent" title="Get Widget" style="font-family: Helvetica, Arial, sans-serif;font-size: 11px;color: #00ACED;" rel="nofollow">Get Widget</a></div><div style="float:right; margin:0;"><a href="http://www.dutchpod101.com" target="_parent" title="Learn Dutch" style="font-family: Helvetica, Arial, sans-serif;font-size: 11px;color: #00ACED;" rel="nofollow">Learn Dutch</a></div></div></div> -->
+<div id="widget" style="width:540px;height:450px;margin:0 auto;"><iframe src="http://www.innovativelanguage.com/widgets/wotd/embed.php?language=Korean&type=large&bg=%23FFFFFF&content=%23000&header=%2387163E&highlight=%23F9F9FA&opacity=1&scrollbg=%2300CAED&sound=%2300ACED&text=%2300ACED&quiz=N" width="540" height="450" frameborder="0" scrolling="no"></iframe><div style="font:bold 9px/16px Verdana; padding:0; height:16px;"><div style="float:left; margin:0;"><a href="http://www.koreanclass101.com/korean-phrases/" target="_parent" title="Get Widget" style="font-family: Helvetica, Arial, sans-serif;font-size: 11px;color: #00ACED;" rel="nofollow">Get Widget</a></div><div style="float:right; margin:0;"><a href="http://www.koreanclass101.com" target="_parent" title="Learn Korean" style="font-family: Helvetica, Arial, sans-serif;font-size: 11px;color: #00ACED;" rel="nofollow">Learn Korean</a></div></div></div>
 
+<div id="widget" style="width:540px;height:450px;margin:0 auto;"><iframe src="http://www.innovativelanguage.com/widgets/wotd/embed.php?language=Dutch&type=large&bg=%23FFFFFF&content=%23000&header=%23FF6600&highlight=%23F9F9FA&opacity=1&scrollbg=%2300CAED&sound=%2300ACED&text=%2300ACED&quiz=N" width="540" height="450" frameborder="0" scrolling="no"></iframe><div style="font:bold 9px/16px Verdana; padding:0; height:16px;"><div style="float:left; margin:0;"><a href="http://www.dutchpod101.com/dutch-phrases/" target="_parent" title="Get Widget" style="font-family: Helvetica, Arial, sans-serif;font-size: 11px;color: #00ACED;" rel="nofollow">Get Widget</a></div><div style="float:right; margin:0;"><a href="http://www.dutchpod101.com" target="_parent" title="Learn Dutch" style="font-family: Helvetica, Arial, sans-serif;font-size: 11px;color: #00ACED;" rel="nofollow">Learn Dutch</a></div></div></div>
+
+<!--
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript" src="app/rss.js"></script>
 
@@ -20,16 +22,8 @@ layout: layout
               if (!result.error) {
                   for (var num = 0; num < result.feed.entries.length; num++) {
                       var entry = result.feed.entries[num];
-                      var title = entry.title;
                       var content = entry.content;
-                      var link = entry.link;
-                      var a = document.createElement('a');
-                      a.href = link;
-                      var domain = a.hostname;
-
-                      var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='http://www.google.com/s2/favicons?domain=" + domain + "'/>";
-
-                      var article = "<div class='article'>" + '<h4>' + title + '</h4>' + ' - ' + content + "</div><hr>";
+                      var article = "<div class='article'>" + '<h4>' + title + '</h4>' + content + "</div><hr>";
 
                       $('#news').append(article);
                   }
@@ -41,3 +35,4 @@ layout: layout
   google.load("feeds", "1");
   google.setOnLoadCallback(show(feeds));
 </script>
+-->
