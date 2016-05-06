@@ -3,6 +3,7 @@ google.load("feeds", "1");
 function initialize(feeds) {
     feeds.forEach(function (entry) {
         var feed = new google.feeds.Feed(entry);
+        feed.setNumEntries(15);
         feed.load(function (result) {
             if (!result.error) {
                 for (var num = 0; num < result.feed.entries.length; num++) {
