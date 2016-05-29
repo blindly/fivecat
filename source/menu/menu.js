@@ -3,21 +3,28 @@
     // All items we'd like to add
     var navItems = [
         {href: 'index.html', text: 'recent'},
-        //{href: 'hn.html', text: 'hn'},
         {href: 'vc.html', text: 'vc'},
-        //{href: 'trends.html', text: 'trending'},
+        {href: 'password.html', text: 'password'},
         {href: 'browsers.html', text: 'browser'},
-        {href: 'lifeprotips.html', text: 'lifePro'},
-        //{href: 'business.html', text: 'business'},
-        //{href: 'gaming.html', text: 'gaming'},
-        //{href: 'opensource.html', text: 'opensource'},
+        {href: 'know.html', text: 'know this!'},
+        {href: 'lifeprotips.html', text: 'life tips'},
+        {href: 'business.html', text: 'business'},
+        {href: 'gaming.html', text: 'gaming'},
+        {href: 'it.html', text: 'it'},
+        {href: 'learn.html', text: 'learn'},
         {href: 'technology.html', text: 'tech'},
-        {href: 'internet.html', text: 'net'},
+        {href: 'data.html', text: 'data'},
         {href: 'jokes.html', text: 'jokes'},
-        {href: 'life.html', text: 'life'},
-        {href: 'words.html', text: 'words'},
+        {href: 'life.html', text: 'life advice'},
+        {href: 'words.html', text: 'word'},
     ];
-
+    
+    navItems.sort(function(a, b){
+        if(a.text < b.text) return -1;
+        if(a.text > b.text) return 1;
+        return 0;
+    });
+    
     // A few variables for use later
     var navElem = document.createElement("nav"),
         navList = document.createElement("ul"),
