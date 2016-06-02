@@ -47,3 +47,37 @@ function googleIt(words){
   google = google + encodeURI(words);
   return google;
 }
+
+function replaceInString(myString, wordList, replaceWith){
+    for (var i = 0; i < wordList.length; i++){
+        myString = myString.replace(wordList[i], replaceWith)
+    }
+    return myString;
+}
+
+function wordMatch(keyWord, wordList){
+    for (var i = 0; i < wordList.length; i++){
+        
+        /*
+        console.log('--');
+        console.log(keyWord)
+        console.log(wordList[i]);
+        console.log( (keyWord == wordList[i] ) );
+        console.log('--');
+        */
+        
+        if (keyWord == wordList[i] ){
+            return true;
+        }
+    }
+    return false;  
+}
+
+function removeFromArray(array, word){
+    var i = array.indexOf( word );
+    if(i != -1) {
+        array.splice(i, 1);
+    }
+    
+    return array;
+}

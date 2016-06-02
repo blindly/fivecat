@@ -4,43 +4,47 @@ layout: sidebar
 ---
 
 <style>
-.article::first-letter {
-    font-weight: bold;
-    color: #629DD1;
-    text-transform: capitalize;
-}
+    .article::first-letter {
+        font-weight: bold;
+        color: #629DD1;
+        text-transform: capitalize;
+    }
 </style>
 
 <script>
-  var url = "https://www.reddit.com/r/youshouldknow/hot.json";
+    var url = "https://www.reddit.com/r/youshouldknow/hot.json";
 
-  document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
 
-    var newsAPI = url;
-    var keyword = "ysk";
-    $.getJSON(newsAPI, function (json) {
-        var children = json.data.children;
-        $.each(children, function (key, value) {
-            var score = children[key]['data']['score'];    
-            if ( score > 20 ){
-                var title = children[key]['data']['title'];
-                title = title.toLowerCase();
-                if ( title.substring(0, 3) == keyword ) {
-                    if ( title.substring(4, 11) != "request" ) {
-                        title = title.replace( keyword, "");
+        var newsAPI = url;
+        var keyword = "ysk";
+        var wordlist = ['-', ':', ': ', ' : ', 'ysk'];
+        var removedList = ['request','how','where','who'];
+
+        $.getJSON(newsAPI, function (json) {
+            var children = json.data.children;
+            $.each(children, function (key, value) {
+                var score = children[key]['data']['score'];    
+                if ( score > 20 ){
+                    var title = children[key]['data']['title'];
+                    title = title.toLowerCase();
+                    if ( title.substring(0, 3) == keyword ) {
+                      
+                        var wordlist = ['-', ':', ': ', ' : ', 'ysk'];
+                        title = replaceInString(title, wordlist, '');
                         
-                        title = title.replace("-", "");
-                        title = title.replace(" - ", "");
+                        var titleArray = title.split(' ');
+                        titleArray = removeFromArray( titleArray, '');
+                                                
+                        if ( ! wordMatch( titleArray[0], removedList ) ) {
+                            
+                            var article = "<div class='article'>" + title + "</div>";
+                            $('#news').append(article);
                         
-                        title = title.replace(": ", "");
-                        title = title.replace(" : ", "");
-
-                        var article = "<div class='article'>" + title + "</div>";
-                        $('#news').append(article);
+                        }
                     }
                 }
-            }
+            });
         });
-    });
-  }, false);
+    }, false);
 </script>
