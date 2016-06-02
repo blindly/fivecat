@@ -1,6 +1,6 @@
 ---
 title: jokes
-layout: layout
+layout: sidebar
 ---
 <style>
 .article::first-letter {
@@ -22,9 +22,12 @@ layout: layout
         $.each(children, function (key, value) {
             var score = children[key]['data']['score'];
             
-            if ( score > 100 ){
+            if ( score > 250 ){
                 var title = children[key]['data']['title'];
                 var text = children[key]['data']['selftext'];
+                
+                var textArray = text.split('Edit:');
+                text = textArray[0];
                 
                 var title_length = title.length;
                 

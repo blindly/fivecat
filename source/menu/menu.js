@@ -55,7 +55,7 @@
     // Add list to body (or anywhere else)
     window.onload = function () {
         //document.body.appendChild(navElem);
-        document.getElementById("nav").appendChild(navElem);
+        document.getElementById("nav").appendChild(navList);
     }
 
 }());

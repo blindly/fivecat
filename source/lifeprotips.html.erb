@@ -1,6 +1,6 @@
 ---
-title: life pro tips
-layout: layout
+title: life tips
+layout: sidebar
 ---
 
 <style>
@@ -27,7 +27,9 @@ layout: layout
                 if ( title.substring(0, 3) == "lpt" ) {
                     if ( title.substring(4, 11) != "request" ) {
                         title = title.replace("lpt - ", "");
-                        title = title.replace("lpt: ", "");                        
+                        title = title.replace("lpt: ", "");   
+                        title = title.replace("lpt:", "");   
+
                         var article = "<div class='article'>" + title + "</div>";
                         $('#news').append(article);
                     }
