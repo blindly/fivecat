@@ -12,7 +12,7 @@
 
         <title><%= current_page.data.title || "fivecat.gq" %></title>
 
-        <%= stylesheet_link_tag "sidebar/bootstrap.min", "sidebar/simple-sidebar", "custom/custom" %>
+        <%= stylesheet_link_tag "sidebar/bootstrap.min", "sidebar/simple-sidebar", "lib/fonts", "custom/custom" %>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,9 +31,11 @@
             <div id="sidebar-wrapper">
                 <ul id='nav' class="sidebar-nav">
                     <li class="sidebar-brand">
-                        <a href="/">
-                            fivecat.gq
-                        </a>
+                        <h2>
+                            <a href="/">
+                                fivecat.gq
+                            </a>
+                        </h2>
                     </li>
 
                 </ul>
