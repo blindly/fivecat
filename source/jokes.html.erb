@@ -11,7 +11,7 @@ layout: sidebar
 </style>
 
 <script>
-  var url = "https://www.reddit.com/r/jokes/hot.json";
+  var url = "https://www.reddit.com/r/jokes/top.json";
 
   document.addEventListener('DOMContentLoaded', function () {
 
@@ -21,18 +21,18 @@ layout: sidebar
         console.log(children);
         $.each(children, function (key, value) {
             var score = children[key]['data']['score'];
-            
+
             if ( score > 250 ){
                 var title = children[key]['data']['title'];
                 var text = children[key]['data']['selftext'];
-                
+
                 var textArray = text.split('Edit:');
                 text = textArray[0];
-                
+
                 var title_length = title.length;
-                
+
                 if ( title.substring(0, title_length) == text.substring(0, title_length) ){
-                    var article = "<div class='article'>" + text + "</div>";                
+                    var article = "<div class='article'>" + text + "</div>";
                 }
                 else {
                     var article = "<div class='article'>" + title + " - " + text + "</div>";

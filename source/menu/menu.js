@@ -9,22 +9,22 @@
         {href: 'know.html', text: 'know this!'},
         {href: 'lifeprotips.html', text: 'life tips'},
         // {href: 'business.html', text: 'business'},
-        {href: 'gaming.html', text: 'gaming'},
-        {href: 'it.html', text: 'it'},
+        //{href: 'gaming.html', text: 'gaming'},
+        //{href: 'it.html', text: 'it'},
         {href: 'learn.html', text: 'learn'},
         // {href: 'technology.html', text: 'tech'},
         // {href: 'data.html', text: 'data'},
-        // {href: 'jokes.html', text: 'jokes'},
+        {href: 'jokes.html', text: 'jokes'},
         {href: 'life.html', text: 'life advice'},
         {href: 'words.html', text: 'word'},
     ];
-    
+
     navItems.sort(function(a, b){
         if(a.text < b.text) return -1;
         if(a.text > b.text) return 1;
         return 0;
     });
-    
+
     // A few variables for use later
     var navElem = document.createElement("nav"),
         navList = document.createElement("ul"),
