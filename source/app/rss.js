@@ -103,6 +103,9 @@ function fetchFeeds(name) {
               "https://www.producthunt.com/feed.atom",
               "https://news.ycombinator.com/rss"
           ],
+          "jstor": [
+              "http://daily.jstor.org/feed/"
+          ],
           "world": [
             "http://feeds.bbci.co.uk/news/rss.xml",
             "https://www.reddit.com/r/worldnews/hot.rss",
@@ -115,5 +118,3 @@ function fetchFeeds(name) {
     var feedArray = data.feeds[name];
     return feedArray;
 }
-
-
