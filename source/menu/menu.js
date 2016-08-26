@@ -17,6 +17,7 @@
         {href: 'jokes.html', text: 'jokes'},
         {href: 'life.html', text: 'life advice'},
         {href: 'words.html', text: 'word'},
+        {href: 'jstor.html', text: 'jstor'},
     ];
 
     navItems.sort(function(a, b){
