@@ -13,10 +13,10 @@
         //{href: 'it.html', text: 'it'},
         {href: 'learn.html', text: 'learn'},
         // {href: 'technology.html', text: 'tech'},
-        // {href: 'data.html', text: 'data'},
+        {href: 'data.html', text: 'data'},
         {href: 'jokes.html', text: 'jokes'},
         {href: 'life.html', text: 'life advice'},
-        {href: 'words.html', text: 'word'},
+        //{href: 'words.html', text: 'word'},
         {href: 'jstor.html', text: 'jstor'},
     ];
 

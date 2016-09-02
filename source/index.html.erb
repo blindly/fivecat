@@ -5,7 +5,7 @@ layout: sidebar
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    var newsblurAPI = "http://www.newsblur.com/reader/river_stories&page=1,2";
+    var newsblurAPI = "//www.newsblur.com/reader/river_stories&page=1,2";
     $.getJSON(newsblurAPI, function (json) {
 
         var stories = json.stories;
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             var title = stories[key]['story_title'];
             var link = stories[key]['story_permalink'];
-            
+
             var favicon_img = generateFavicon(link);
             link = instapaperIt(link);
 

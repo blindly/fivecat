@@ -104,7 +104,7 @@ function fetchFeeds(name) {
               "https://news.ycombinator.com/rss"
           ],
           "jstor": [
-              "http://daily.jstor.org/feed/"
+              "//daily.jstor.org/feed/"
           ],
           "world": [
             "http://feeds.bbci.co.uk/news/rss.xml",
