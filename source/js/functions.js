@@ -25,25 +25,25 @@ function generateFavicon(link){
     a.href = link;
     var domain = a.hostname;
 
-    var favicon = "http://www.google.com/s2/favicons?domain=" + domain;
+    var favicon = "//www.google.com/s2/favicons?domain=" + domain;
 
     return favicon;
 }
 
 function instapaperIt(link){
-    var instapaper = 'https://www.instapaper.com/text?u=';
+    var instapaper = '//www.instapaper.com/text?u=';
     link = instapaper + link;
     return link;
 }
 
 function bingIt(words){
-  var bing = "https://www.bing.com/search?q=";
+  var bing = "//www.bing.com/search?q=";
   bing = bing + encodeURI(words);
   return bing;
 }
 
 function googleIt(words){
-  var google = "https://www.google.com/search?client=opera&q=";
+  var google = "//www.google.com/search?client=opera&q=";
   google = google + encodeURI(words);
   return google;
 }
@@ -57,7 +57,7 @@ function replaceInString(myString, wordList, replaceWith){
 
 function wordMatch(keyWord, wordList){
     for (var i = 0; i < wordList.length; i++){
-        
+
         /*
         console.log('--');
         console.log(keyWord)
@@ -65,12 +65,12 @@ function wordMatch(keyWord, wordList){
         console.log( (keyWord == wordList[i] ) );
         console.log('--');
         */
-        
+
         if (keyWord == wordList[i] ){
             return true;
         }
     }
-    return false;  
+    return false;
 }
 
 function removeFromArray(array, word){
@@ -78,6 +78,6 @@ function removeFromArray(array, word){
     if(i != -1) {
         array.splice(i, 1);
     }
-    
+
     return array;
 }
