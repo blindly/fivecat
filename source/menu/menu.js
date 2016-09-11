@@ -3,7 +3,7 @@
     // All items we'd like to add
     var navItems = [
         {href: 'index.html', text: 'recent'},
-        {href: 'vc.html', text: 'vc'},
+        {href: 'vc.html', text: 'hnews'},
         {href: 'password.html', text: 'password'},
         {href: 'browsers.html', text: 'browser'},
         {href: 'know.html', text: 'know this!'},
@@ -13,11 +13,11 @@
         //{href: 'it.html', text: 'it'},
         {href: 'learn.html', text: 'learn'},
         // {href: 'technology.html', text: 'tech'},
-        {href: 'data.html', text: 'data'},
+        {href: 'data.html', text: 'interesting'},
         {href: 'jokes.html', text: 'jokes'},
         {href: 'life.html', text: 'life advice'},
         //{href: 'words.html', text: 'word'},
-        {href: 'jstor.html', text: 'jstor'},
+        //{href: 'jstor.html', text: 'jstor'},
     ];
 
     navItems.sort(function(a, b){
