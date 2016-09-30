@@ -3,24 +3,13 @@ title: trending news
 layout: sidebar
 ---
 
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="app/rss.js"></script>
+
 <script type="text/javascript">
+  var feeds = fetchFeeds('trending');
+  console.log(feeds);
 
-function showFeed(data){
-    if(data.status == 'ok'){
-        for(var i=0;i<data.items.length;++i){
-
-            var link = data.items[i].link;
-            var title = data.items[i].title;
-            var favicon_img = generateFavicon(link);
-            link = instapaperIt(link);
-            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
-            var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
-            $('#news').append(article);
-
-        }
-    }
-}
-
+  google.load("feeds", "1");
+  google.setOnLoadCallback(initialize(feeds));
 </script>
-<script type="text/javascript" src="//rss2json.com/api.json?rss_url=http%3A%2F%2Fwww.faroo.com%2Fapi%3Fq%3D%26start%3D1%26length%3D10%26l%3Den%26src%3Dnews%26f%3Drss"></script>
-</body>

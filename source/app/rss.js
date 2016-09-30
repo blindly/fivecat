@@ -111,6 +111,12 @@ function fetchFeeds(name) {
             "https://www.reddit.com/r/worldnews/hot.rss",
             "http://feeds.bbci.co.uk/news/world/rss.xml",
             "http://feeds.feedburner.com/BreakingDefense"
+          ],
+          "security": [
+            "https://threatpost.com/feed/"
+          ],
+          "trending": [
+            "http://www.faroo.com/api?q=&start=1&length=10&l=en&src=news&f=rss"
           ]
       }
     }
