@@ -1,0 +1,26 @@
+---
+title: trending news
+layout: sidebar
+---
+
+<script type="text/javascript">
+
+function showFeed(data){
+    if(data.status == 'ok'){
+        for(var i=0;i<data.items.length;++i){
+
+            var link = data.items[i].link;
+            var title = data.items[i].title;
+            var favicon_img = generateFavicon(link);
+            link = instapaperIt(link);
+            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
+            var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
+            $('#news').append(article);
+
+        }
+    }
+}
+
+</script>
+<script type="text/javascript" src="http://rss2json.com/api.json?callback=showFeed&rss_url=http://www.faroo.com/api?q=&start=1&length=10&l=en&src=news&f=rss"></script>
+</body>
