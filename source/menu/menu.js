@@ -9,6 +9,7 @@
         {href: 'browsers.html', text: 'browser'},
         {href: 'know.html', text: 'know this!'},
         {href: 'lifeprotips.html', text: 'life tips'},
+        {href: 'security.html', text: 'security'},
         // {href: 'business.html', text: 'business'},
         //{href: 'gaming.html', text: 'gaming'},
         //{href: 'it.html', text: 'it'},
