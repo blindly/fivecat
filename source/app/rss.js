@@ -99,12 +99,14 @@ function fetchFeeds(name) {
             "http://feeds.feedblitz.com/dutch-word-of-the-day",
             "http://feeds.feedblitz.com/korean-word-of-the-day"
           ],
-          "venturecapital": [
+          "startups": [
               "https://www.producthunt.com/feed.atom",
-              "https://news.ycombinator.com/rss"
+              "https://news.ycombinator.com/rss",
+              "http://pineapple.io/resources.atom",
+              "https://apprater.net/feed"
           ],
           "jstor": [
-              "//daily.jstor.org/feed/"
+              "http://daily.jstor.org/feed/"
           ],
           "world": [
             "http://feeds.bbci.co.uk/news/rss.xml",
@@ -117,6 +119,9 @@ function fetchFeeds(name) {
           ],
           "trending": [
             "http://www.faroo.com/api?q=&start=1&length=10&l=en&src=news&f=rss"
+          ],
+          "wikinews": [
+            "https://en.wikinews.org/w/index.php?title=Special:NewsFeed&feed=atom&categories=Published&notcategories=No%20publish%7CArchived%7CAutoArchived%7Cdisputed&namespace=0&count=30&hourcount=124&ordermethod=categoryadd&stablepages=only"
           ]
       }
     }

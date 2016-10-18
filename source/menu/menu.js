@@ -3,10 +3,11 @@
     // All items we'd like to add
     var navItems = [
         {href: 'index.html', text: 'recent'},
-        {href: 'vc.html', text: 'hnews'},
+        {href: 'startups.html', text: 'startups'},
         {href: 'trending.html', text: 'trending'},
+        {href: 'wikinews.html', text: 'wikinews'},
         {href: 'password.html', text: 'password'},
-        {href: 'browsers.html', text: 'browser'},
+        {href: 'browsers.html', text: 'browsers'},
         {href: 'know.html', text: 'know this!'},
         {href: 'lifeprotips.html', text: 'life tips'},
         {href: 'security.html', text: 'security'},
