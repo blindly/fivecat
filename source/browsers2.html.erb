@@ -1,0 +1,54 @@
+---
+title: browser news
+layout: sidebar
+---
+
+<script type="text/javascript">
+
+/*
+    var content = document.getElementById('news');
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function(){
+            if (xhr.readyState==4 && xhr.status==200)
+            {
+                var data = JSON.parse(xhr.responseText);
+                if(data.status == 'ok'){
+
+                    var output;
+
+                    for(var i=0;i<data.items.length;++i){
+
+                        link = data.items[i].link;
+
+                        // Bing links are redirected but redirection doesn't work
+	                    link = decodeURIComponent(link);
+                        link = link.replace(/amp;/g, '');
+                        parms = getParmsFromURLHash(link);
+
+                        if(parms.url){
+                            link = parms.url;
+                        }
+
+                        title = data.items[i].title;
+
+                        var favicon_img = generateFavicon(link);
+                        link = instapaperIt(link);
+                        var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
+                        var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
+                        $('#news').append(article);
+
+                    }
+                }
+            }
+        };
+    xhr.open('GET','//rss2json.com/api.json?rss_url=http://mix.chimpfeedr.com/e4df6-Web-Browsers',true);
+    xhr.send();
+
+*/
+
+    var content = rss2json(http://mix.chimpfeedr.com/e4df6-Web-Browsers);
+    console.log(content);
+
+</script>
