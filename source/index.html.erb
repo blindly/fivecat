@@ -6,6 +6,9 @@ layout: sidebar
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     var newsblurAPI = "//www.newsblur.com/reader/river_stories&page=1,2";
+    
+    var FEED_ARRAY = [];
+    
     $.getJSON(newsblurAPI, function (json) {
 
         var stories = json.stories;
@@ -14,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             var title = stories[key]['story_title'];
             var link = stories[key]['story_permalink'];
+            var pubDate = stories[key]['story_date'];
+            
 
             var favicon_img = generateFavicon(link);
             link = instapaperIt(link);
@@ -21,9 +26,20 @@ document.addEventListener('DOMContentLoaded', function () {
             var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
             var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
 
-            $('#news').append(article);
+            //$('#news').append(article);
+            
+            var FEED_OBJ = {};
+            //FEED_OBJ.favicon = favicon_img;
+            FEED_OBJ.link = link;
+            FEED_OBJ.title = title;
+            FEED_OBJ.pubDate = pubDate;
+            FEED_ARRAY.push(FEED_OBJ);
         });
+        
     });
+    
+    console.log(FEED_ARRAY);
+    return FEED_ARRAY;
 }, false);
 
 </script>

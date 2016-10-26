@@ -3,6 +3,10 @@ title: browser news
 layout: sidebar
 ---
 
+<script type="text/javascript" src="parser/rss2json/app.js"></script>
+<script type="text/javascript" src="writer/json/app.js"></script>
+
+
 <script type="text/javascript">
 
 /*
@@ -48,7 +52,19 @@ layout: sidebar
 
 */
 
-    var content = rss2json(http://mix.chimpfeedr.com/e4df6-Web-Browsers);
-    console.log(content);
+
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        var feeds = ["http://mix.chimpfeedr.com/e4df6-Web-Browsers"]
+    
+        var content = rss2json( feeds );
+    
+        var output = json2writer(content);
+        
+        console.log(output);
+        console.log("---");
+        console.log(content);
+    
+    }, false);
 
 </script>

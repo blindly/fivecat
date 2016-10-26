@@ -1,3 +1,15 @@
+function sortFunction(a,b){  
+    var dateA = new Date(a.date).getTime();
+    var dateB = new Date(b.date).getTime();
+    return dateA > dateB ? 1 : -1;  
+}; 
+
+function uniq(a, param){
+    return a.filter(function(item, pos, array){
+        return array.map(function(mapItem){ return mapItem[param]; }).indexOf(item[param]) === pos;
+    })
+}
+
 function getParmsFromURLHash(url) {
     var parms = {}, pieces, parts, i;
     var hash = url.lastIndexOf("#");
