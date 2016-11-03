@@ -24,6 +24,7 @@
     </head>
 
     <body>
+        <div class="loader"></div>
 
         <div id="wrapper">
 
@@ -83,6 +84,13 @@
                 e.preventDefault();
                 $("#wrapper").toggleClass("toggled");
             });
+        </script>
+
+        <!-- Loading -->
+        <script type="text/javascript">
+        $(window).load(function() {
+            $(".loader").fadeOut("slow");
+        })
         </script>
 
         <script type="text/javascript" src="menu/menu.js"></script>
