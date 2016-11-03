@@ -3,13 +3,25 @@ title: life advice
 layout: sidebar
 ---
 
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="app/rss.js"></script>
-
 <script type="text/javascript">
-  var feeds = fetchFeeds('life');
-  console.log(feeds);
+    document.addEventListener('DOMContentLoaded', function () {
+        var newsblurAPI = "http://api.fivecat.gq/api/index.php/feed/life";
+        $.getJSON(newsblurAPI, function (json) {
 
-  google.load("feeds", "1");
-  google.setOnLoadCallback(initialize(feeds));
+            var stories = json.stories;
+
+            $.each(stories, function (key, value) {            
+                var link = stories[key]['link'];
+                var title = stories[key]['title'];
+                var favicon_img = stories[key]['favicon'];
+
+                var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
+                var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
+
+                $('#news').append(article);
+            });
+        });
+    }, false);
+
 </script>
+</body>

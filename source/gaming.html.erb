@@ -3,22 +3,25 @@ title: gaming news
 layout: sidebar
 ---
 
-<script>
-  var url = "https://www.reddit.com/r/gamingnews/hot.json";
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        var newsblurAPI = "http://api.fivecat.gq/api/index.php/feed/gaming";
+        $.getJSON(newsblurAPI, function (json) {
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var newsAPI = url;
-    $.getJSON(newsAPI, function (json) {
-        var children = json.data.children;
-        $.each(children, function (key, value) {
-            var title = children[key]['data']['title'];
-            var link = children[key]['data']['url'];
-            //link = instapaperIt(link);
-            var favicon_img = generateFavicon(link);
-            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
-            var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
-            $('#news').append(article);
+            var stories = json.stories;
+
+            $.each(stories, function (key, value) {            
+                var link = stories[key]['link'];
+                var title = stories[key]['title'];
+                var favicon_img = stories[key]['favicon'];
+
+                var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
+                var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
+
+                $('#news').append(article);
+            });
         });
-    });
-  }, false);
+    }, false);
+
 </script>
+</body>

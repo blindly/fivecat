@@ -1,30 +1,27 @@
----
-title: river news
+--- 
+title: river news 
 layout: sidebar
 ---
 
 <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        var newsblurAPI = "http://api.fivecat.gq/api/index.php/feed";
+        $.getJSON(newsblurAPI, function (json) {
 
-document.addEventListener('DOMContentLoaded', function () {
-    var newsblurAPI = "http://api.fivecat.gq/api/index.php/feed";
-    $.getJSON(newsblurAPI, function (json) {
+            var stories = json.stories;
 
-        var stories = json.stories;
+            $.each(stories, function (key, value) {            
+                var link = stories[key]['link'];
+                var title = stories[key]['title'];
+                var favicon_img = stories[key]['favicon'];
 
-        $.each(stories, function (key, value) {            
-            var link = stories[key]['link'];
-            var title = stories[key]['title'];
-            var favicon_img = stories[key]['favicon'];
+                var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
+                var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
 
-            var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
-            var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
-
-            $('#news').append(article);
+                $('#news').append(article);
+            });
         });
-    });
-}, false);
-
+    }, false);
 
 </script>
-<script type="text/javascript" src=""></script>
 </body>
