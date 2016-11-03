@@ -1,20 +1,22 @@
 ---
-title: river news
+title: recent news
 layout: sidebar
 ---
 
-<script type="text/javascript">
-
+<script>
 document.addEventListener('DOMContentLoaded', function () {
-    var newsblurAPI = "http://api.fivecat.gq/api";
+    var newsblurAPI = "//www.newsblur.com/reader/river_stories&page=1,2";
     $.getJSON(newsblurAPI, function (json) {
 
         var stories = json.stories;
 
-        $.each(stories, function (key, value) {            
-            var link = stories[key]['link'];
-            var title = stories[key]['title'];
-            var favicon_img = stories[key]['favicon'];
+        $.each(stories, function (key, value) {
+
+            var title = stories[key]['story_title'];
+            var link = stories[key]['story_permalink'];
+
+            var favicon_img = generateFavicon(link);
+            link = instapaperIt(link);
 
             var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
             var article = "<div class='article'><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></div>";
@@ -24,7 +26,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 }, false);
 
-
 </script>
-<script type="text/javascript" src=""></script>
-</body>
