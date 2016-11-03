@@ -2,26 +2,26 @@
 
     // All items we'd like to add
     var navItems = [
-        {href: 'index', text: 'river'},
-        {href: 'recent', text: 'recent'},
-        {href: 'startups', text: 'startups'},
-        //{href: 'trending', text: 'trending'},
-        //{href: 'wikinews', text: 'wikinews'},
+        {href: 'index.html', text: 'river'},
+        {href: 'recent.html', text: 'recent'},
+        {href: 'startups.html', text: 'startups'},
+        //{href: 'trending.html', text: 'trending'},
+        //{href: 'wikinews.html', text: 'wikinews'},
         {href: 'password', text: 'password'},
-        {href: 'browsers', text: 'browsers'},
-        {href: 'know', text: 'know this!'},
-        {href: 'lifeprotips', text: 'life tips'},
-        {href: 'security', text: 'security'},
-        // {href: 'business', text: 'business'},
-        {href: 'gaming', text: 'gaming'},
-        //{href: 'it', text: 'it'},
-        {href: 'learn', text: 'learn'},
-        // {href: 'technology', text: 'tech'},
-        {href: 'data', text: 'interesting'},
-        {href: 'jokes', text: 'jokes'},
-        {href: 'life', text: 'life advice'},
-        {href: 'words', text: 'word'},
-        //{href: 'jstor', text: 'jstor'},
+        {href: 'browsers.html', text: 'browsers'},
+        {href: 'know.html', text: 'know this!'},
+        {href: 'lifeprotips.html', text: 'life tips'},
+        {href: 'security.html', text: 'security'},
+        // {href: 'business.html', text: 'business'},
+        {href: 'gaming.html', text: 'gaming'},
+        //{href: 'it.html', text: 'it'},
+        {href: 'learn.html', text: 'learn'},
+        // {href: 'technology.html', text: 'tech'},
+        {href: 'data.html', text: 'interesting'},
+        {href: 'jokes.html', text: 'jokes'},
+        {href: 'life.html', text: 'life advice'},
+        {href: 'words.html', text: 'word'},
+        //{href: 'jstor.html', text: 'jstor'},
     ];
 
     navItems.sort(function(a, b){
@@ -47,7 +47,7 @@
 
         // Set properties on anchor
         navLink.href = navItems[i].href;
-        navLink.inne = navItems[i].text;
+        navLink.innerHTML = navItems[i].text;
 
         // Add anchor to list item, and list item to list
         navItem.appendChild(navLink);
