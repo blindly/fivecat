@@ -12,33 +12,32 @@ layout: sidebar
 </style>
 
 <script>
-    var url = "https://www.reddit.com/r/youshouldknow/hot.json";
+    let url = "https://www.reddit.com/r/youshouldknow/hot.json";
 
     document.addEventListener('DOMContentLoaded', function () {
 
-        var newsAPI = url;
-        var keyword = "ysk";
-        var wordlist = ['-', ':', ': ', ' : ', 'ysk', 'ysk, '];
-        var removedList = ['request','how','where','who'];
+        let newsAPI = url;
+        let keyword = "ysk";
+        let wordlist = ['ysk,', '-', ':', ': ', ' : ', 'ysk'];
+        let removedList = ['request','how','where','who'];
 
         $.getJSON(newsAPI, function (json) {
             var children = json.data.children;
             $.each(children, function (key, value) {
-                var score = children[key]['data']['score'];    
+                let score = children[key]['data']['score'];    
                 if ( score > 20 ){
                     var title = children[key]['data']['title'];
                     title = title.toLowerCase();
                     if ( title.substring(0, 3) == keyword ) {
                       
-                        var wordlist = ['-', ':', ': ', ' : ', 'ysk', 'ysk,'];
                         title = replaceInString(title, wordlist, '');
                         
-                        var titleArray = title.split(' ');
+                        let titleArray = title.split(' ');
                         titleArray = removeFromArray( titleArray, '');
                                                 
                         if ( ! wordMatch( titleArray[0], removedList ) ) {
                             
-                            var article = "<div class='article'>" + title + "</div>";
+                            let article = "<div class='article'>" + title + "</div>";
                             $('#news').append(article);
                         
                         }
