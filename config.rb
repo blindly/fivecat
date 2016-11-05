@@ -66,6 +66,15 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
+  # We need this for Netlify, but the after_build stuff may be deprecated when upgrading to Middleman v4
+  after_build do |builder|
+    # Netlify requires a _redirects file for its redirects, but Middleman ignores files which
+    # start with an underscore! So we have to hack it a little.
+    src = File.join(config[:source],"_redirects")
+    dst = File.join(config[:build_dir],"_redirects")
+    builder.source_paths << File.dirname(__FILE__)
+    builder.copy_file(src,dst)
+
   # Sitemap
   #activate :sitemap
 
