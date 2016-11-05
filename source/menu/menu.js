@@ -1,8 +1,7 @@
 (function(){
-
     // All items we'd like to add
     var navItems = [
-        {href: 'index.html', text: 'river'},
+        //{href: 'index.html', text: 'river'},
         {href: 'recent.html', text: 'recent'},
         {href: 'startups.html', text: 'startups'},
         //{href: 'trending.html', text: 'trending'},
@@ -24,6 +23,7 @@
         //{href: 'jstor.html', text: 'jstor'},
     ];
 
+    // Sorts the menu items to be in alphabetical order
     navItems.sort(function(a, b){
         if(a.text < b.text) return -1;
         if(a.text > b.text) return 1;
