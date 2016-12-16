@@ -1,0 +1,13 @@
+{
+  "name": "fivecat",
+  "short_name": "fivecat",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "description": "News Aggregator",
+    "icons": [{
+    "src": "/assets/img/favicon.ico",
+    "sizes": "16x16",
+    "type": "image/x-icon"
+  }]
+}

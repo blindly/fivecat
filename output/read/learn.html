@@ -1,0 +1,35 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="/assets/css/loader.css"><title>Learn that</title></head><body><div class="loader"></div><div id="wrapper"><div id="main"><div class="inner"><header id="header"><a href="/" class="logo"><b>Editorial</b><span>&nbsp; by Fivecat</span></a></header><section><header class="major"><h2>Learn that</h2></header><div id="news" class="posts"></div></section><section><footer id="footer"><p class="copyright">&copy; Fivecat. All Rights Reserved. Design: <a href="https://html5up.net">HTML5 UP</a></p></footer></section></div></div><div id="sidebar"><div class="inner"><nav id="menu"><header class="major"><h2>Menu</h2></header></nav></div></div></div><script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script><script src="/assets/js/editorial/skel.min.js"></script><script src="/assets/js/editorial/util.js"></script><script src="/assets/js/editorial/main.js"></script><script src="/assets/js/loading/loading.js"></script><script src="/assets/js/menu/menu.js"></script><script src="/assets/js/functions/functions.js"></script><script src="/assets/js/debug/kuoll.js"></script><style>article::first-letter {
+    font-weight: bold;
+    color: #629DD1;
+    text-transform: capitalize;
+}
+</style><script>var url = "https://www.reddit.com/r/TodayILearned/hot.json";
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  var newsAPI = url;
+  var keyword = "til";
+  $.getJSON(newsAPI, function (json) {
+      var children = json.data.children;
+      $.each(children, function (key, value) {
+          var score = children[key]['data']['score'];    
+          if ( score > 20 ){
+              var title = children[key]['data']['title'];
+              title = title.toLowerCase();
+              if ( title.substring(0, 3) == keyword ) {
+                  if ( title.substring(4, 11) != "request" ) {
+
+                      title = title.replace( keyword, "");
+                      title = title.replace("-", "");
+                      title = title.replace(" - ", "");
+                      title = title.replace(": ", "");
+                      title = title.replace(" : ", "");
+
+                      var article = "<article>" + title + "</article>";
+                      $('#news').append(article);
+                  }
+              }
+          }
+      });
+  });
+}, false);</script></body></html>

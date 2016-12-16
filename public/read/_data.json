@@ -1,0 +1,41 @@
+ {
+   "browsers": {
+     "title": "Browsers"
+   },
+   "data": {
+     "title": "Interesting"
+   },
+   "gaming": {
+     "title": "Gaming"
+   },
+   "jokes": {
+     "title": "Jokes"
+   },
+   "know": {
+     "title": "You should know"
+   },
+   "learn": {
+     "title": "Learn that"
+   },
+   "life": {
+     "title": "Life Advice"
+   },
+   "lifeprotips": {
+     "title": "Life tips"
+   },
+   "password": {
+     "title": "Passwords"
+   },
+   "trending": {
+     "title": "Now Trending"
+   },
+   "startups": {
+     "title": "Startup News"
+   },
+   "words": {
+     "title": "Word of the day"
+   },
+   "river": {
+     "title": "River News"
+   }
+ }
