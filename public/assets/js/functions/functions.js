@@ -81,5 +81,3 @@ function removeFromArray(array, word){
 
     return array;
 }
-
-function
