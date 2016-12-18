@@ -81,3 +81,18 @@ function removeFromArray(array, word){
 
     return array;
 }
+
+function findReplace(string, findWord, replaceWord) {
+
+  string = string.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+  var stringArray = string.split(" ");
+
+  for(var i = 0; i < stringArray.length; i++) {
+
+    if(stringArray[i].toUpperCase() ==  findWord.toUpperCase()) {
+      stringArray[i] = replaceWord;
+    }
+  }
+
+  return stringArray.join(" ");
+}
