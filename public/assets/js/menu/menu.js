@@ -3,9 +3,6 @@
     var navItems = [
         //{href: 'index.html', text: 'river'},
         {href: '/read/startups', text: 'startups'},
-        //{href: 'trending.html', text: 'trending'},
-        //{href: 'wikinews.html', text: 'wikinews'},
-        {href: '/read/password', text: 'password'},
         {href: '/read/browsers', text: 'browsers'},
         {href: '/read/know', text: 'know this!'},
         {href: '/read/lifeprotips', text: 'life tips'},
@@ -16,7 +13,6 @@
         {href: '/read/learn', text: 'learn'},
         // {href: 'technology.html', text: 'tech'},
         {href: '/read/data', text: 'interesting'},
-        {href: '/read/jokes', text: 'jokes'},
         {href: '/read/life', text: 'life advice'},
         //{href: '/read/words', text: 'word'},
         //{href: 'jstor.html', text: 'jstor'},
