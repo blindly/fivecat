@@ -11,7 +11,7 @@
         {href: '/read/gaming', text: 'gaming'},
         //{href: 'it.html', text: 'it'},
         {href: '/read/learn', text: 'learn'},
-        {href: '/read/week', text: 'weekly roundup'},
+        {href: '/read/week', text: 'top weekly'},
         // {href: 'technology.html', text: 'tech'},
         {href: '/read/data', text: 'interesting'},
         {href: '/read/life', text: 'life advice'},
