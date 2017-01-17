@@ -1,13 +1,10 @@
 {
-  "name": "fivecat",
-  "short_name": "fivecat",
-  "start_url": "index.html",
-  "display": "standalone",
-  "orientation": "landscape",
-  "description": "News Aggregator",
-    "icons": [{
-    "src": "/assets/img/favicon.ico",
-    "sizes": "16x16",
-    "type": "image/x-icon"
-  }]
+  "manifest_version": 2,
+
+  "name": "Fivecat.GQ",
+  "theme_color": "#7f888f",
+  "background_color": "#27282C",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/"
 }
