@@ -40,5 +40,8 @@
    },
    "week": {
      "title": "Weekly Round-up"
+   },
+   "enterprise": {
+     "title": "Enterprise News Round-up"
    }
  }
