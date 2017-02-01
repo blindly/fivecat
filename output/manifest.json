@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "manifest_version": 2,
 
@@ -9,15 +8,3 @@
   "scope": "/",
   "start_url": "/"
 }
-=======
-{
-  "manifest_version": 2,
-
-  "name": "Fivecat.GQ",
-  "theme_color": "#7f888f",
-  "background_color": "#27282C",
-  "display": "browser",
-  "scope": "/",
-  "start_url": "/"
-}
->>>>>>> ad0e2c75c485253c17a5ae810d50799b9667e32d
