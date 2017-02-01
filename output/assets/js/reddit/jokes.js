@@ -1,4 +1,5 @@
   var url = "https://www.reddit.com/r/jokes/top.json";
+  let max = 5000;
 
   document.addEventListener('DOMContentLoaded', function () {
 
@@ -9,7 +10,7 @@
         $.each(children, function (key, value) {
             var score = children[key]['data']['score'];
 
-            if ( score > 250 ){
+            if ( score > max ){
                 var title = children[key]['data']['title'];
                 var text = children[key]['data']['selftext'];
 
