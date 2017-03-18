@@ -3,16 +3,22 @@
     var navItems = [
         //{href: 'index.html', text: 'river'},
         {href: '/read/startups', text: 'startups'},
-        // {href: '/read/browsers', text: 'browsers'},
+        {href: '/read/browsers', text: 'browsers'},
         {href: '/read/know', text: 'know this!'},
         {href: '/read/lifeprotips', text: 'life tips'},
+        //{href: '/read/security', text: 'security'},
+        // {href: 'business.html', text: 'business'},
         {href: '/read/gaming', text: 'gaming'},
+        //{href: 'it.html', text: 'it'},
         {href: '/read/learn', text: 'learn'},
         {href: '/read/week', text: 'top weekly'},
+        // {href: 'technology.html', text: 'tech'},
         {href: '/read/data', text: 'interesting'},
         {href: '/read/life', text: 'life advice'},
         {href: '/read/enterprise', text: 'enterprise'},
         
+        //{href: '/read/words', text: 'word'},
+        //{href: 'jstor.html', text: 'jstor'},
     ];
 
     // Sorts the menu items to be in alphabetical order
