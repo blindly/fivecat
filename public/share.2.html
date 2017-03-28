@@ -50,12 +50,17 @@
       session.setUseWorker(false);
       session.setMode("ace/mode/javascript");
       */
-
+      
       var editor = new Quill('#firepad-container', {
         modules: {
-          toolbar: '#toolbar'
+          toolbar: [
+            [{ header: [1, 2, false] }],
+            ['bold', 'italic', 'underline'],
+            ['image', 'code-block']
+          ]
         },
-        theme: 'snow'
+        placeholder: 'Compose an epic...',
+        theme: 'snow'  // or 'bubble'
       });
 
       //// Create Firepad.
