@@ -30,6 +30,14 @@ function generateFavicon(link){
     return favicon;
 }
 
+function getDomain(link){
+    var a = document.createElement('a');
+    a.href = link;
+    var domain = a.hostname;
+
+    return domain;
+}
+
 function instapaperIt(link){
     var instapaper = '//www.instapaper.com/text?u=';
     link = instapaper + link;
