@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+  /* global getDomain */
+  /* global generateFavicon */
+  /* global $ */
+  
   let url = "//www.newsblur.com/reader/river_stories&page=1,2";
   $.getJSON(url, function (json) {
 
@@ -38,12 +42,10 @@ document.addEventListener('DOMContentLoaded', function () {
         ];
         
       var blacklisted = blacklistDomains.indexOf( domain ) != -1;
-      
       if (blacklisted) {
         show = false;
       } 
-      
-      console.log(domain + ": : " + blacklisted );
+      // console.log(domain + ": : " + blacklisted );
       // End of Blacklist
       
       //console.log(domain + ": " + show );
