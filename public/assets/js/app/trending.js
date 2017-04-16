@@ -25,6 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
       //console.log(titles);
       // End of Duplicate
       
+      // Start of Questionmark
+      var isQuestion = title.indexOf('?') > -1;
+      if ( isQuestion ) {
+        show = false;
+      }
+      // End of Questionmark
+      
       // Start of Blacklist
       var blacklistDomains = [
         'boingboing.net',
