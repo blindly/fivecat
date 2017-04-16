@@ -3,21 +3,45 @@ document.addEventListener('DOMContentLoaded', function () {
   $.getJSON(url, function (json) {
 
     var stories = json.stories;
+    var titles = [];
 
     $.each(stories, function (key, value) {
+      
+      var show = true;
+      
       var title = stories[key]['story_title'];
       var link = stories[key]['story_permalink'];
 
       var favicon_img = generateFavicon(link);
       var domain = getDomain(link);
       
+      // Start of Duplicate
+      var duplicate = titles.indexOf(title) != -1;
+      //console.log(title + ": dup: " + duplicate );
+      if ( ! duplicate ) {
+        titles.push(title);
+        show = true;
+      }
+      //console.log(titles);
+      // End of Duplicate
+      
+      // Start of Blacklist
       var blacklistDomains = [
         'boingboing.net',
         ];
         
-      var blacklisted = blacklistDomains.indexOf( domain );
+      var blacklisted = blacklistDomains.indexOf( domain ) != -1;
+      
+      if (blacklisted) {
+        show = false;
+      } 
+      
+      console.log(domain + ": : " + blacklisted );
+      // End of Blacklist
+      
+      //console.log(domain + ": " + show );
         
-      if ( blacklisted == -1 ) {
+      if ( show == true ) {
 
         var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
         var article = "<article><p><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></p></article>";
