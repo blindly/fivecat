@@ -4,7 +4,7 @@
   "name": "Fivecat.GQ",
   "theme_color": "#7f888f",
   "background_color": "#27282C",
-  "display": "browser",
+  "display": "standalone",
   "scope": "/",
   "start_url": "/"
 }
