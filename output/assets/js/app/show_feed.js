@@ -14,8 +14,6 @@ function show_feed(data) {
 
       if ( ! isPresent ) {
         bucket.push(title); // Append to Array
-      }
-      else {
         $('#news').append(article);
       }
 
