@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if ( show == true ) {
 
         var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
-        var article = "<article><p><a class='title' target='_blank' href='" + link + "'>" + favicon + title + "</a></p></article>";
+        var article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + title + "</a></p></article>";
   
         $('#news').append(article);
       
