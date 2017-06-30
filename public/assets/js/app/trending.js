@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
       
       var show = true;
       
-      var title = stories[key]['story_title'];
-      var link = stories[key]['story_permalink'];
+      var title = stories[key].story_title;
+      var link = stories[key].story_permalink;
 
       var favicon_img = generateFavicon(link);
       var domain = getDomain(link);
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
       //console.log(domain + ": " + show );
         
-      if ( show == true ) {
+      if ( show === true ) {
 
         var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
         var article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + title + "</a></p></article>";

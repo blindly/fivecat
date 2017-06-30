@@ -17,6 +17,8 @@
         {href: '/read/life', text: 'life advice'},
         {href: '/read/enterprise', text: 'enterprise'},
         
+        {href: '/view/todo', text: 'todo'},
+        
         //{href: '/read/words', text: 'word'},
         //{href: 'jstor.html', text: 'jstor'},
     ];
