@@ -15,6 +15,7 @@
         {href: '/read/enterprise', text: 'enterprise'},        
         {href: '/read/korea', text: 'korea'},
         {href: '/read/kdrama', text: 'kdrama'},
+        {href: '/read/jokes', text: 'jokes'},
         //
     ];
 

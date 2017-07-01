@@ -43,5 +43,12 @@
    },
    "enterprise": {
      "title": "Enterprise News Round-up"
-   }
+   },
+   "korea": {
+    "title": "Korean News"
+   },
+   "hangul": {
+    "title": "Hangul"
+   },
+   {} //
  }
