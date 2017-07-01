@@ -6,7 +6,7 @@
         {href: '/read/browsers', text: 'browsers'},
         {href: '/read/know', text: 'know this!'},
         {href: '/read/lifeprotips', text: 'life tips'},
-        {href: '/read/password', text: 'Password'},
+        {href: '/read/password', text: 'password'},
         {href: '/read/gaming', text: 'gaming'},
         {href: '/read/learn', text: 'learn'},
         {href: '/read/week', text: 'top weekly'},
