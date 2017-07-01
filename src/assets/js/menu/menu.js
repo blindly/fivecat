@@ -15,10 +15,7 @@
         // {href: 'technology.html', text: 'tech'},
         {href: '/read/data', text: 'interesting'},
         {href: '/read/life', text: 'life advice'},
-        {href: '/read/enterprise', text: 'enterprise'},
-        
-        {href: '/view/todo', text: 'todo'},
-        
+        {href: '/read/enterprise', text: 'enterprise'},        
         //{href: '/read/words', text: 'word'},
         //{href: 'jstor.html', text: 'jstor'},
     ];

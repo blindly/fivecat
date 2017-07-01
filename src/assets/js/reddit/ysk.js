@@ -10,9 +10,9 @@
         $.getJSON(newsAPI, function (json) {
             var children = json.data.children;
             $.each(children, function (key, value) {
-                let score = children[key]['data']['score'];    
+                let score = children[key].data.score;    
                 if ( score > 20 ){
-                    var title = children[key]['data']['title'];
+                    var title = children[key].data.title;
                     title = title.toLowerCase();
                     if ( title.substring(0, 3) == keyword ) {
                       

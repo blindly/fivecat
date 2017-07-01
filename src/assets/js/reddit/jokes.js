@@ -1,5 +1,5 @@
   var url = "https://www.reddit.com/r/jokes/top.json";
-  let max = 5000;
+  let max = 100;
 
   document.addEventListener('DOMContentLoaded', function () {
 

@@ -6,10 +6,10 @@
     $.getJSON(newsAPI, function (json) {
         var children = json.data.children;
         $.each(children, function (key, value) {
-            var score = children[key]['data']['score'];    
+            var score = children[key].data.score;    
             if ( score > 10 ){
-                let title = children[key]['data']['title'];
-                let selftext = children[key]['data']['selftext'];
+                let title = children[key].data.title;
+                let selftext = children[key].data.selftext;
                 title = title.toLowerCase();
                 selftext = selftext.toLowerCase();
 
@@ -31,7 +31,7 @@
                     
                     if ( selftext.length < 500) {
                       title = title + ".  " + selftext;
-                  }
+                    }
                     
                     let titleEdit = title.split("edit:");
                     title = titleEdit[0];
