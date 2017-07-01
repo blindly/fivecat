@@ -17,7 +17,7 @@ var Header = React.createClass({
 	render: function() {
 		return <div className="panel-heading">
 				  	<h1 className="panel-title">To-do List</h1>
-				  	<a className="home" href="/" target="_blank">
+				  	<a className="home" href="/">
 				  		<Button type="home" />
 				  	</a>
 					</div>
