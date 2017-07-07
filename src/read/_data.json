@@ -50,6 +50,9 @@
    "webdev": {
     "title": "Web Development"
    },
+   "chromeos": {
+    "title": "Chrome OS"
+   },
    "hangul": {
     "title": "Hangul"
    }

@@ -13,7 +13,6 @@
                 title = title.toLowerCase();
                 selftext = selftext.toLowerCase();
 
-                let titleArray = title.split(" ");
                 let lpt = title.indexOf("lpt");
 
                 if ( lpt > -1 ) {

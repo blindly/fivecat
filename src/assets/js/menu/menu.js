@@ -3,10 +3,12 @@
     var navItems = [
         //{href: 'index.html', text: 'river'},
         {href: '/read/startups', text: 'startups'},
-        {href: '/read/browsers', text: 'browsers'},
+        {href: '/read/chromeos', text: 'chrome os'},
+        {href: '/read/trending', text: 'trending'},
+        //{href: '/read/browsers', text: 'browsers'},
         {href: '/read/know', text: 'know this!'},
         {href: '/read/lifeprotips', text: 'life tips'},
-        {href: '/read/password', text: 'password'},
+        //{href: '/read/password', text: 'password'},
         {href: '/read/gaming', text: 'gaming'},
         {href: '/read/learn', text: 'learn'},
         {href: '/read/week', text: 'top weekly'},
@@ -14,7 +16,7 @@
         {href: '/read/life', text: 'life advice'},
         {href: '/read/enterprise', text: 'enterprise'},        
         {href: '/read/korea', text: 'korea'},
-        {href: '/read/kdrama', text: 'kdrama'},
+        //{href: '/read/kdrama', text: 'kdrama'},
         {href: '/read/jokes', text: 'jokes'},
         {href: '/read/webdev', text: 'web dev'},
         //
