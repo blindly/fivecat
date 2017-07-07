@@ -1,10 +1,12 @@
+/*eslint-env jquery */
+/*eslint-disable no-unused-vars */
 function feed_api(url) {
   document.addEventListener('DOMContentLoaded', function () {
     $.getJSON(url, function (json) {
 
       var stories = json.stories;
 
-      $.each(stories, function (key, value) {
+      $.each(stories, function (key) {
         var link = stories[key].link;
         var title = stories[key].title;
         var favicon_img = stories[key].favicon;
