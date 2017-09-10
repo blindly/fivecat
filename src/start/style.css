@@ -189,7 +189,7 @@
 		transition: 0.25s ease;
 	} 
 	
-	input {
+	input#search_bar {
 		font-family: 'Open Sans', sans-serif;
 		text-align: center;
 		color: var(--white);
@@ -205,12 +205,12 @@
 		transition: 0.2s ease;
 	}
 		
-	input:focus {
+	input#search_bar:focus {
 		border: 2px solid var(--foreground-light);
 		outline: 0;
 	}
 		
-	input:hover {
+	input#search_bar:hover {
 		border: 2px solid var(--foreground-light);
 	}
 	
