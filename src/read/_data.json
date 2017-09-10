@@ -5,6 +5,9 @@
    "weather": {
      "title": "Weather News"
    },
+   "cnn": {
+     "title": "CNN Top News"
+   },
    "data": {
      "title": "Interesting"
    },
