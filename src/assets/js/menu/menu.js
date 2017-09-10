@@ -19,6 +19,7 @@
         //{href: '/read/kdrama', text: 'kdrama'},
         {href: '/read/jokes', text: 'jokes'},
         {href: '/read/webdev', text: 'web dev'},
+        {href: '/read/weather', text: 'weather'},
         //
     ];
 
