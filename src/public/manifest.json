@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+
+  "name": "Fivecat.GQ",
+  "theme_color": "#7f888f",
+  "background_color": "#27282C",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}

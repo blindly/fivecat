@@ -1,0 +1,16 @@
+style.
+  article::first-letter {
+      font-weight: bold;
+      color: #629DD1;
+      text-transform: capitalize;
+  }
+
+script(src="/assets/js/app/reddit_lpt.js")
+
+script.
+  let ltp_url = "//www.reddit.com/r/LifeProTips/hot.json";
+  reddit_lpt(ltp_url);
+
+script.
+  let ultp_url = "//www.reddit.com/r/UnethicalLifeProTips/hot.json";
+  reddit_lpt(ultp_url, 20, 'em-smiling_imp', 'ULPT:');
