@@ -2,9 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* global getDomain */
   /* global generateFavicon */
   /* global $ */
-  
-  console.log("hello");
-  
+    
   let url = "//www.newsblur.com/reader/river_stories&page=1,2";
   $.getJSON(url, function (json) {
 
@@ -30,6 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       //console.log(titles);
       // End of Duplicate
+      
+      // Start of Sponsored
+      var isSponsored = title.indexOf('[Sponsor]') > -1;
+      if ( isSponsored ) {
+        show = false;
+      }
+      // End of Questionmark
       
       // Start of Questionmark
       var isQuestion = title.indexOf('?') > -1;
