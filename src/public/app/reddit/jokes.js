@@ -20,10 +20,10 @@
                 var title_length = title.length;
 
                 if ( title.substring(0, title_length) == text.substring(0, title_length) ){
-                    var article = "<article>" + text + "</article>";
+                    var article = "<article><p>" + text + "</p></article>";
                 }
                 else {
-                    var article = "<article>" + title + " - " + text + "</article>";
+                    var article = "<article><p>" + title + " - " + text + "</p></article>";
                 }
 
                 $('#news').append(article);
