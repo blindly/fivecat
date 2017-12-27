@@ -16,6 +16,7 @@
         {href: '/read/data', text: 'interesting'},
         {href: '/read/life', text: 'life advice'},
         {href: '/read/enterprise', text: 'enterprise'},
+        {href: '/read/programming', text: 'programming & linux'},
         {href: '/read/korea', text: 'korea'},
         //{href: '/read/kdrama', text: 'kdrama'},
         {href: '/read/jokes', text: 'jokes'},

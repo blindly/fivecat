@@ -59,6 +59,9 @@
    "chromeos": {
      "title": "Chrome OS"
    },
+      "programming": {
+     "title": "Programming & *nix"
+   },
    "netsec": {
      "title": "Network Security"
    },
