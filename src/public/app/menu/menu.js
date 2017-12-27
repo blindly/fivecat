@@ -7,6 +7,7 @@
         {href: '/read/trending', text: 'trending'},
         //{href: '/read/browsers', text: 'browsers'},
         {href: '/read/know', text: 'know this!'},
+        {href: '/read/netsec', text: 'ntwrk s3cur1ty'},
         {href: '/read/lifeprotips', text: 'life tips'},
         //{href: '/read/password', text: 'password'},
         {href: '/read/gaming', text: 'gaming'},

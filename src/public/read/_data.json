@@ -51,15 +51,18 @@
      "title": "Enterprise News Round-up"
    },
    "korea": {
-    "title": "Korean News"
+     "title": "Korean News"
    },
    "webdev": {
-    "title": "Web Development"
+     "title": "Web Development"
    },
    "chromeos": {
-    "title": "Chrome OS"
+     "title": "Chrome OS"
+   },
+   "netsec": {
+     "title": "Network Security"
    },
    "hangul": {
-    "title": "Hangul"
+     "title": "Hangul"
    }
  }
