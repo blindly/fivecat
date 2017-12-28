@@ -7,32 +7,41 @@
 <html>
 
 <head>
-  <title>
-    <%- title %>
-  </title>
   <meta charset="utf-8" />
+  <title><%- title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+
   <link rel="stylesheet" href="/assets/css/main.css" />
+  
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  
+  <!-- Loading screen -->
   <link rel="stylesheet" href="/app/loading/loading.css" />
   
+  <!-- Emojis -->
   <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css" />
   <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
+  <!-- Favicons -->
   <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon" />
+  
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.json">
 
+
+  <!-- No Scrollbars -->
   <style>
     ::-webkit-scrollbar {
       display: none;
     }
-
   </style>
 
 </head>
 
 <body>
   
+  <!-- Loader -->
   <div class="loader"></div>
 
   <!-- Header -->
@@ -43,16 +52,11 @@
       <p>A news aggregator</p>
 
     </header>
-    <nav id="nav">
-      <!--
-					<ul>
-						<li><a href="#one" class="active">trending</a></li>
-						<li><a href="#two">startups</a></li>
-						<li><a href="#three">jokes</a></li>
-						<li><a href="#four">life tips</a></li>
-					</ul>
-                  -->
-    </nav>
+    
+    <!-- Menu -->
+    <nav id="nav"></nav>
+    
+    <!-- Footer -->
     <footer>
       <ul class="icons">
         <li>Logo made with <a href="https://www.designevo.com/" title="Free Online Logo Maker">DesignEvo</a></li>
@@ -80,17 +84,14 @@
 
       <!-- Three -->
       <section id="three">
-
+        <!-- Web Search -->
         <div class="container" id="search">
           <form action="https://duckduckgo.com/">
             <input type="text" name="q" placeholder="Search the web" autofocus autocomplete="off" />
           </form>
-
         </div>
-
-        <div class="container" id="news">
-
-        </div>
+        <!-- News -->
+        <div class="container" id="news"></div>
       </section>
 
     </div>
@@ -113,8 +114,7 @@
   <script src="/app/debug/sentry.js"></script>
 
   <%- yield %>
-
-
+  
 </body>
 
 </html>
