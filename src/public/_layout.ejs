@@ -8,16 +8,18 @@
 
 <head>
   <meta charset="utf-8" />
-  <title><%- title %></title>
+  <title>
+    <%- title %>
+  </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link rel="stylesheet" href="/assets/css/main.css" />
-  
+
   <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-  
+
   <!-- Loading screen -->
   <link rel="stylesheet" href="/app/loading/loading.css" />
-  
+
   <!-- Emojis -->
   <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css" />
   <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -25,10 +27,10 @@
   <!-- Favicons -->
   <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon" />
-  
+
   <!-- Manifest -->
   <link rel="manifest" href="/manifest.json">
-  
+
   <link rel="search" type="application/opensearchdescription+xml" title="fivecat" href="/app/search/opensearch.xml">
 
 
@@ -38,12 +40,13 @@
     ::-webkit-scrollbar {
       display: none;
     }
+
   </style>
 
 </head>
 
 <body>
-  
+
   <!-- Loader -->
   <div class="loader"></div>
 
@@ -55,10 +58,10 @@
       <p>A news aggregator</p>
 
     </header>
-    
+
     <!-- Menu -->
     <nav id="nav"></nav>
-    
+
     <!-- Footer -->
     <footer>
       <ul class="icons">
@@ -87,20 +90,14 @@
 
       <!-- Three -->
       <section id="three">
+
         <!-- Web Search -->
         <div class="container" id="search">
           <form method="get" action="/">
             <input type="text" name="q" placeholder="Search the web" autofocus autocomplete="off" />
           </form>
         </div>
-        
-        <!-- Web Search
-        <div class="container" id="search">
-          <form action="https://duckduckgo.com/">
-            <input type="text" name="q" placeholder="Search the web" autofocus autocomplete="off" />
-          </form>
-        </div>  -->
-        
+
         <!-- News -->
         <div class="container" id="news"></div>
       </section>
@@ -111,9 +108,10 @@
 
   <!-- Scripts -->
   <script src="/assets/js/jquery.min.js"></script>
-  <!-- <script src="/assets/js/jquery.scrollzer.min.js"></script> -->
-  <!-- <script src="/assets/js/jquery.scrolly.min.js"></script> -->
-  
+  <script src="/assets/js/jquery.scrollzer.min.js"></script>
+  <script src="/assets/js/jquery.scrolly.min.js"></script>
+
+  <!-- Loading -->
   <script src="/app/loading/loading.js"></script>
 
   <script src="/assets/js/skel.min.js"></script>
@@ -122,17 +120,17 @@
 
   <script src="/app/functions/functions.js"></script>
   <script src="/app/menu/menu.js"></script>
-  
+
   <script src="/app/search/lib/micromustache.js"></script>
   <script src="/app/search/index.js"></script>
 
-  <!--
+  <!-- Report Bugs
   <script src="//cdn.ravenjs.com/3.9.1/raven.min.js"></script>
   <script src="/app/debug/sentry.js"></script>
   -->
 
   <%- yield %>
-  
+
 </body>
 
 </html>
