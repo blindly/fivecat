@@ -10,6 +10,10 @@ config = [
     "pattern": "https://www.wikipedia.org/w/index.php?search={{query}}",
     "bangs": ["w", "wiki"]
   }, {
+    "fullname": "smile.amazon.com",
+    "pattern": "https://smile.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords={{query}}",
+    "bangs": ["a", "az"]
+  }, {
     "fullname": "www.youtube.com",
     "pattern": "https://www.youtube.com/results?search_query={{query}}",
     "bangs": ["yt"]
