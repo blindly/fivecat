@@ -14,6 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
   <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/app/loading/loading.css" />
+  
   <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css" />
   <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
@@ -30,6 +32,8 @@
 </head>
 
 <body>
+  
+  <div class="loader"></div>
 
   <!-- Header -->
   <section id="header">
@@ -97,6 +101,9 @@
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/jquery.scrollzer.min.js"></script>
   <script src="/assets/js/jquery.scrolly.min.js"></script>
+  
+  <script src="/app/loading/loading.js"></script>
+
   <script src="/assets/js/skel.min.js"></script>
   <script src="/assets/js/util.js"></script>
   <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
@@ -104,7 +111,6 @@
 
   <script src="/app/functions/functions.js"></script>
   <script src="/app/menu/menu.js"></script>
-  <script src="/app/loading/loading.js"></script>
 
   <%- yield %>
 

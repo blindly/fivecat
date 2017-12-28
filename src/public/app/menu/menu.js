@@ -5,17 +5,19 @@
         {href: '/read/startups', text: 'startups'},
         {href: '/read/webdev', text: 'web dev'},
         {href: '/read/netsec', text: 'Network'},
-
-        {href: '/read/chromeos', text: 'chrome os'},
-        {href: '/read/browsers', text: 'browsers'},
+      
         {href: '/read/know', text: 'know this!'},
         {href: '/read/lifeprotips', text: 'life tips'},
+        {href: '/read/learn', text: 'learn'},
+        {href: '/read/life', text: 'life advice'},
+
+        //{href: '/read/chromeos', text: 'chrome os'},
+        {href: '/read/browsers', text: 'browsers'},
+
         {href: '/read/password', text: 'password'},
         {href: '/read/gaming', text: 'gaming'},
-        {href: '/read/learn', text: 'learn'},
         {href: '/read/week', text: 'top weekly'},
         {href: '/read/data', text: 'interesting'},
-        {href: '/read/life', text: 'life advice'},
         {href: '/read/enterprise', text: 'enterprise'},
         {href: '/read/programming', text: 'programming'},
         {href: '/read/korea', text: 'korea'},

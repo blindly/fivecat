@@ -59,11 +59,14 @@
    "chromeos": {
      "title": "Chrome OS"
    },
-      "programming": {
+   "programming": {
      "title": "Programming"
    },
    "netsec": {
      "title": "Network Security"
+   },
+   "kdrama": {
+     "title": "K-Dramas"
    },
    "hangul": {
      "title": "Hangul"
