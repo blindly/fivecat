@@ -48,7 +48,7 @@
      "title": "Weekly Round-up"
    },
    "enterprise": {
-     "title": "Enterprise News Round-up"
+     "title": "Enterprise News"
    },
    "korea": {
      "title": "Korean News"
@@ -60,7 +60,7 @@
      "title": "Chrome OS"
    },
       "programming": {
-     "title": "Programming & *nix"
+     "title": "Programming"
    },
    "netsec": {
      "title": "Network Security"

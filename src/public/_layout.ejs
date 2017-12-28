@@ -7,13 +7,17 @@
 <html>
 
 <head>
-  <title>fivecat</title>
+  <title><%- title %></title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
   <link rel="stylesheet" href="/assets/css/main.css" />
   <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css" />
   <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+  
+  <link rel="icon" href="/images/avatar.png" type="image/x-icon"/>
+<link rel="shortcut icon" href="/images/avatar.png" type="image/x-icon"/>
+  
 </head>
 
 <body>
@@ -22,7 +26,7 @@
   <section id="header">
     <header>
       <span class="image avatar"><img src="/images/avatar.png" alt="" /></span>
-      <h1 id="logo"><a href="#">fivecat</a></h1>
+      <h1 id="logo"><a href="/">fivecat</a></h1>
       <p>A news aggregator</p>
 
     </header>
@@ -63,6 +67,14 @@
 
       <!-- Three -->
       <section id="three">
+        
+        <div class="container" id="search">
+          <form action="https://duckduckgo.com/">
+            <input type="text" name="q" placeholder="Search the web" />
+          </form>
+          
+        </div>
+        
         <div class="container" id="news">
 
         </div>

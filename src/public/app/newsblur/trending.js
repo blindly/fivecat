@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if ( isSponsored ) {
         show = false;
       }
-      // End of Questionmark
+      // End of Sponsored
       
       // Start of Questionmark
       var isQuestion = title.indexOf('?') > -1;

@@ -1,35 +1,37 @@
 (function(){
     // All items we'd like to add
     var navItems = [
-        //{href: 'index.html', text: 'river'},
-        {href: '/read/startups', text: 'startups'},
-        {href: '/read/chromeos', text: 'chrome os'},
         {href: '/read/trending', text: 'trending'},
-        //{href: '/read/browsers', text: 'browsers'},
+        {href: '/read/startups', text: 'startups'},
+        {href: '/read/webdev', text: 'web dev'},
+        {href: '/read/netsec', text: 'Network'},
+
+        {href: '/read/chromeos', text: 'chrome os'},
+        {href: '/read/browsers', text: 'browsers'},
         {href: '/read/know', text: 'know this!'},
-        {href: '/read/netsec', text: 'ntwrk s3cur1ty'},
         {href: '/read/lifeprotips', text: 'life tips'},
-        //{href: '/read/password', text: 'password'},
+        {href: '/read/password', text: 'password'},
         {href: '/read/gaming', text: 'gaming'},
         {href: '/read/learn', text: 'learn'},
         {href: '/read/week', text: 'top weekly'},
         {href: '/read/data', text: 'interesting'},
         {href: '/read/life', text: 'life advice'},
         {href: '/read/enterprise', text: 'enterprise'},
-        {href: '/read/programming', text: 'programming & linux'},
+        {href: '/read/programming', text: 'programming'},
         {href: '/read/korea', text: 'korea'},
-        //{href: '/read/kdrama', text: 'kdrama'},
+        {href: '/read/kdrama', text: 'kdrama'},
         {href: '/read/jokes', text: 'jokes'},
-        {href: '/read/webdev', text: 'web dev'},
         //
     ];
 
     // Sorts the menu items to be in alphabetical order
+    /*
     navItems.sort(function(a, b){
         if(a.text < b.text) return -1;
         if(a.text > b.text) return 1;
         return 0;
     });
+    */
 
     // A few variables for use later
     var navElem = document.createElement("nav"),
