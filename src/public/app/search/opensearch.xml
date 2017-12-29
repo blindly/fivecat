@@ -3,7 +3,6 @@
   <ShortName>fivecat</ShortName>
   <Description>Search and News - Friendly and Informed</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image height="64" width="64" type="image/jpg">https://fivecat.xyz/images/avatar-transparent.png</Image>
   <Url type="text/html" template="https://fivecat.xyz/?q={searchTerms}" />
   <Image height="16" width="16" type="image/x-icon">https://fivecat.xyz/images/avatar-transparent.png</Image>
 </OpenSearchDescription>
