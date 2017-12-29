@@ -42,6 +42,10 @@ config = [
     "pattern": "https://developer.mozilla.org/en-US/search?q={{query}}&topic=api&topic=css&topic=canvas&topic=html&topic=http&topic=js&topic=mobile&topic=apps&topic=svg&topic=webdev&topic=webext&topic=webgl",
     "bangs": ["mdn"]
   }, {
+    "fullname": "gotourl",
+    "pattern": "http://{{query}}",
+    "bangs": [">"]
+  }, {
     "fullname": "publicwww.org",
     "pattern": "https://publicwww.com/websites/{{query}}/",
     "bangs": ["www"]
@@ -72,37 +76,27 @@ get_query = function () {
   }
 };
 
-search = function(sentence, bangs, default_template) {
+search = function (sentence, bangs, default_template) {
   var index, k, len2, template, url, word, words;
   template = default_template;
   words = sentence.split(/\s+/);
-    
+
   index = 0;
   for (k = 0, len2 = words.length; k < len2; k++) {
     word = words[k];
-    
-    /*
-    alert("words are " + words);
-    alert("count is " + k);
-    alert("word is " + word);
-    alert(word.substring(0, 1));
-    */
-    
+
     if (word.substring(0, 1) === '!' && bangs[word.substring(1)]) {
       words.splice(index, 1);
       template = bangs[word.substring(1)].pattern;
-      k=0;
-      len2=len2-1;
-      //alert("template is " + template);
+      k = 0;
+      len2 = len2 - 1;
     }
     index++;
   }
   url = MicroMustache.render(template, {
     query: words.join('+')
   });
-  
-  //alert("url is " + url);
-  
+
   return window.location.href = url;
 };
 
