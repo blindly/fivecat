@@ -4,7 +4,7 @@
   "name": "fivecat",
   "theme_color": "#7f888f",
   "background_color": "#27282C",
-  "display": "standalone",
+  "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
   "icons": [{
