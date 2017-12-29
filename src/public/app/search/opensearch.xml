@@ -3,5 +3,5 @@
 	<ShortName>fivecat</ShortName>
 	<Description>Search friendly</Description>
 	<!--Image height="64" width="64" type="image/jpg">http://mjal.github.io/ami/logo.jpg</Image-->
-	<Url type="text/html" template="http://localhost:9000/?q={searchTerms}"/>
+	<Url type="text/html" template="https://fivecat.xyz/?q={searchTerms}"/>
 </OpenSearchDescription>

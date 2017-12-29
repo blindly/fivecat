@@ -1,10 +1,38 @@
 {
   "manifest_version": 2,
 
-  "name": "Fivecat.GQ",
+  "name": "fivecat",
   "theme_color": "#7f888f",
   "background_color": "#27282C",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/"
+  "start_url": "/",
+  "icons": [{
+    "src": "",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "/images/avatar.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "/images/avatar.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "/images/avatar.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "/images/avatar.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "/images/avatar.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "related_applications": [{
+    "platform": "web"
+  }]
 }
