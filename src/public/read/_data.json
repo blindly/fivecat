@@ -2,6 +2,12 @@
    "browsers": {
      "title": "Browsers"
    },
+   "bookmarks": {
+     "title": "Bookmarks"
+   },
+   "crypto": {
+     "title": "Crypto Currency News"
+   },
    "weather": {
      "title": "Weather News"
    },

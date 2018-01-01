@@ -4,6 +4,7 @@
         {href: '/read/trending', text: 'trending'},
         {href: '/read/startups', text: 'startups'},
         {href: '/read/webdev', text: 'web dev'},
+        {href: '/read/crypto', text: 'altcoin'},
         {href: '/read/netsec', text: 'Network'},
       
         {href: '/read/know', text: 'know this!'},

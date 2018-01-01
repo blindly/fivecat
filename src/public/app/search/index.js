@@ -16,11 +16,11 @@ config = [
   }, {
     "fullname": "www.youtube.com",
     "pattern": "https://www.youtube.com/results?search_query={{query}}",
-    "bangs": ["yt"]
+    "bangs": ["yt", "y"]
   }, {
     "fullname": "www.duckduckgo.com",
     "pattern": "https://duckduckgo.com/?q={{query}}",
-    "bangs": ["ddg"]
+    "bangs": ["ddg", "d"]
   }, {
     "fullname": "www.github.com",
     "pattern": "https://github.com/search?utf8=%E2%9C%93&q={{query}}&type=",
