@@ -46,11 +46,20 @@ config = [
     "pattern": "http://{{query}}",
     "bangs": [">"]
   }, {
+    "fullname": "EasyCounter",
+    "pattern": "https://www.easycounter.com/report/{{query}}",
+    "bangs": ["ec"]
+  }, {
+    "fullname": "Whois Domain",
+    "pattern": "https://whois.domaintools.com/{{query}}",
+    "bangs": ["who"]
+  }, {
     "fullname": "publicwww.org",
     "pattern": "https://publicwww.com/websites/{{query}}/",
     "bangs": ["www"]
   }
 ];
+
 
 default_template = config[0].pattern;
 
