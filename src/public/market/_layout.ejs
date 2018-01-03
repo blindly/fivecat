@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    <%- title %>
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Created from SCSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+
+  <!-- Loading screen -->
+  <link rel="stylesheet" href="/app/loading/loading.css" />
+
+  <!-- Emojis -->
+  <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+  <!-- Icons -->
+  <link rel="icon" href="/images/avatar-transparent.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="/images/avatar-transparent.png" type="image/x-icon" />
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/images/avatar.png">
+
+  <!-- Microsoft -->
+  <meta name="application-name" content="Fivecat" />
+  <meta name="msapplication-square70x70logo" content="/images/avatar.png" />
+  <meta name="msapplication-square150x150logo" content="/images/avatar.png" />
+  <meta name="msapplication-wide310x150logo" content="/images/avatar.png" />
+  <meta name="msapplication-square310x310logo" content="/images/avatar.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- OpenSearch -->
+  <link rel="search" type="application/opensearchdescription+xml" title="fivecat" href="/app/search/opensearch.xml">
+
+  <!-- No Referrer -->
+  <meta name="referrer" content="no-referrer" />
+
+  <!-- SEO -->
+  <meta name="description" content="A search engine and news aggregator with an attitude" />
+
+  <!-- Scrolls -->
+  <style>
+    html {
+      overflow: auto;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div class="loader"></div>
+
+  <!-- Header -->
+  <section id="header">
+    <header>
+      <span class="image avatar"><img src="/images/avatar.png" alt="" /></span>
+      <h1 id="logo"><a href="/">fivecat</a></h1>
+      <p>A news aggregator</p>
+
+    </header>
+
+    <!-- Menu -->
+    <nav id="nav"></nav>
+
+    <!-- Footer -->
+    <footer>
+      <ul class="icons">
+        <li>Logo made with <a href="https://www.designevo.com/" title="Free Online Logo Maker">DesignEvo</a></li>
+        <li>Design by <a href="https://www.html5up.net" title="Responsive HTML5 and CSS3 site templates">HTML5 UP!</a></li>
+      </ul>
+    </footer>
+  </section>
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+
+      <!-- One -->
+      <section id="one">
+        <div class="container">
+          <header class="major">
+            <h2>
+              <%- title %>
+            </h2>
+          </header>
+        </div>
+      </section>
+
+      <!-- Three -->
+      <section id="three">
+
+        <!-- Web Search -->
+        <div class="container" id="search">
+          <form method="get" action="/">
+            <input type="text" name="q" placeholder="Search the web" autofocus autocomplete="off" />
+
+          </form>
+        </div>
+
+        <%- yield %>
+
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/jquery.scrollzer.min.js"></script>
+  <script src="/assets/js/jquery.scrolly.min.js"></script>
+
+  <!-- Loading -->
+  <script src="/app/loading/loading.js"></script>
+
+  <script src="/assets/js/skel.min.js"></script>
+  <script src="/assets/js/util.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+  <script src="/app/functions/functions.js"></script>
+  <script src="/app/menu/menu.js"></script>
+
+  <!-- Search -->
+  <script src="/app/search/lib/micromustache.js"></script>
+  <script src="/app/search/index.js"></script>
+
+  <!-- Report Bugs
+  <script src="//cdn.ravenjs.com/3.9.1/raven.min.js"></script>
+  <script src="/app/debug/sentry.js"></script>
+  -->
+
+</body>
+
+</html>
