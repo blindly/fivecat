@@ -6,10 +6,11 @@ function show_bookmarks(data) {
     $.each(bookmarks, function (key) {
 
       let link = bookmarks[key].url;
+      let domain = bookmarks[key].domain;
       let favicon_img = bookmarks[key].favicon;
 
       let favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
-      let article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + link + "</a></p></article>";
+      let article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + domain + "</a></p></article>";
       
       // Check if url has already been submitted under another title. No dup stories
       const isUrlPresent = urlBucket.includes(link);
