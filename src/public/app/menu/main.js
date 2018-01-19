@@ -5,12 +5,12 @@
         {href: '/read/startups', text: 'startups'},
         {href: '/read/webdev', text: 'web dev'},
         {href: '/read/crypto', text: 'altcoin'},
+        {href: '/read/saved', text: 'saved links'},
       
         {href: '/read/programming', text: 'programming'},
         {href: '/read/enterprise', text: 'enterprise'},
 
         {href: '/read/week', text: 'top weekly'},
-        {href: '/read/bookmarks', text: 'bookmarks'},
       
         {href: '/read/know', text: 'know this!'},
         {href: '/read/lifeprotips', text: 'life tips'},

@@ -19,3 +19,22 @@ function feed_api(url) {
     });
   }, false);
 }
+
+function show_bookmarks(url) {
+  document.addEventListener('DOMContentLoaded', function () {
+    $.getJSON(url, function (json) {
+
+      var bookmarks = json.bookmarks;
+
+      $.each(bookmarks, function (key) {
+        var link = bookmarks[key].link;
+        var favicon_img = bookmarks[key].favicon;
+
+        var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
+        var article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + link + "</a></p></article>";
+
+        $('#news').append(article);
+      });
+    });
+  }, false);
+}
