@@ -9,8 +9,9 @@ function show_bookmarks(data) {
       let domain = bookmarks[key].domain;
       let favicon_img = bookmarks[key].favicon;
 
+      let remove = "<span class='pull-right'><a href=\"javascript:remove_bookmark('" + link + "')\" ><i class='fa fa-trash' aria-hidden=\"true\"></i></a></span>";
       let favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
-      let article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + domain + "</a></p></article>";
+      let article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + domain + "</a>"+ remove +"</p></article>";
       
       // Check if url has already been submitted under another title. No dup stories
       const isUrlPresent = urlBucket.includes(link);
@@ -27,6 +28,16 @@ function show_bookmarks(data) {
 function save_bookmark(data) {
 
   var url = "https://api.fivecat.xyz/api/index.php/bookmarks/add?url=" + data;
+  $.ajax({
+    dataType: 'json',
+    url: url,
+  });
+
+}
+
+function remove_bookmark(data) {
+
+  var url = "https://api.fivecat.xyz/api/index.php/bookmarks/delete?url=" + data;
   $.ajax({
     dataType: 'json',
     url: url,
