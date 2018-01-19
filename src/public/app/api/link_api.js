@@ -25,7 +25,7 @@ function show_bookmarks(data) {
 
 function save_bookmark(data) {
 
-  var url = "http://api.fivecat.xyz/api/index.php/bookmarks/add?url=" + data;
+  var url = "https://api.fivecat.xyz/api/index.php/bookmarks/add?url=" + data;
   $.ajax({
     dataType: 'json',
     url: url,
