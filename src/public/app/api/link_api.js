@@ -11,8 +11,8 @@ function show_bookmarks(data) {
 
       let remove = "<span class='pull-right'><a href=\"javascript:remove_bookmark('" + link + "')\" ><i class='fa fa-trash' aria-hidden=\"true\"></i></a></span>";
       let favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
-      let article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + domain + "</a>"+ remove +"</p></article>";
-      
+      let article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + domain + "</a>" + remove + "</p></article>";
+
       // Check if url has already been submitted under another title. No dup stories
       const isUrlPresent = urlBucket.includes(link);
 
@@ -32,7 +32,22 @@ function save_bookmark(data) {
     dataType: 'json',
     url: url,
   });
-  
+
+  $.notify.addStyle('happyblue', {
+    html: "<div>☺<span data-notify-text/>☺</div>",
+    classes: {
+      base: {
+        "white-space": "nowrap",
+        "background-color": "lightblue",
+        "padding": "5px"
+      },
+      superblue: {
+        "color": "white",
+        "background-color": "blue"
+      }
+    }
+  });
+
   $.notify("Saved");
 
 }
@@ -44,7 +59,7 @@ function remove_bookmark(data) {
     dataType: 'json',
     url: url,
   });
-  
+
   window.location.reload();
 
 }
