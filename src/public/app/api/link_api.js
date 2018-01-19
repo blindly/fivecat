@@ -32,6 +32,8 @@ function save_bookmark(data) {
     dataType: 'json',
     url: url,
   });
+  
+  $.notify("Saved");
 
 }
 
