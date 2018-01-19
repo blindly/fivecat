@@ -37,7 +37,7 @@ function save_bookmark(data) {
 
 function remove_bookmark(data) {
 
-  var url = "https://api.fivecat.xyz/api/index.php/bookmarks/delete?url=" + data;
+  var url = "https://api.fivecat.xyz/api/index.php/bookmarks/remove?url=" + data;
   $.ajax({
     dataType: 'json',
     url: url,
