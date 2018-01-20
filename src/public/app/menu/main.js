@@ -7,7 +7,7 @@
         {href: '/read/crypto', text: 'altcoin'},
         {href: '/read/saved', text: 'saved links'},
       
-        {href: '/read/programming', text: 'programming'},
+        {href: '/read/tech', text: 'technology'},
         {href: '/read/enterprise', text: 'enterprise'},
 
         {href: '/read/week', text: 'top weekly'},
@@ -20,7 +20,6 @@
         //{href: '/read/chromeos', text: 'chrome os'},
         {href: '/read/browsers', text: 'browsers'},
         {href: '/read/netsec', text: 'Network'},
-
 
         {href: '/read/password', text: 'password'},
         {href: '/read/gaming', text: 'gaming'},
