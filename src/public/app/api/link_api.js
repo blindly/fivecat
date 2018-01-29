@@ -8,10 +8,13 @@ function show_bookmarks(data) {
       let link = bookmarks[key].url;
       let domain = bookmarks[key].domain;
       let favicon_img = bookmarks[key].favicon;
-
+      
+      let title = bookmarks[key].title;
+      title = title ? title : domain;
+      
       let remove = "<span class='pull-right'><a href=\"javascript:remove_bookmark('" + link + "')\" ><i class='fa fa-trash' aria-hidden=\"true\"></i></a></span>";
       let favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
-      let article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + domain + "</a>" + remove + "</p></article>";
+      let article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + title + "</a>" + remove + "</p></article>";
 
       // Check if url has already been submitted under another title. No dup stories
       const isUrlPresent = urlBucket.includes(link);
