@@ -62,7 +62,7 @@ function remove_bookmark(data) {
     dataType: 'json',
     url: url,
   });
-
-  window.location.reload();
+  
+  $.notify("Queued for removal");
 
 }
