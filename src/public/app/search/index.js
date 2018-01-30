@@ -68,6 +68,11 @@ config = [
     "fullname": "tineye.com",
     "pattern": "https://www.tineye.com/parse?url={{query}}/",
     "bangs": ["img", "t"]
+  },
+  {
+    "fullname": "kb.vmware.com",
+    "pattern": "https://kb.vmware.com/s/global-search/{{query}}/",
+    "bangs": ["vmw", "v"]
   }
 ];
 
