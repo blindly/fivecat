@@ -5,7 +5,13 @@ config = [
     "fullname": "www.google.com",
     "pattern": "https://www.google.com/search?q={{query}}",
     "bangs": ["g", "gus"]
-  }, {
+  },
+  {
+    "fullname": "www.google.com/lucky",
+    "pattern": "http://www.google.com/search?q={{query}}&btnI",
+    "bangs": ["?"]
+  },
+  {
     "fullname": "www.wikipedia.org",
     "pattern": "https://www.wikipedia.org/w/index.php?search={{query}}",
     "bangs": ["w", "wiki"]
