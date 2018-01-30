@@ -7,8 +7,8 @@ config = [
     "bangs": ["g", "gus"]
   },
   {
-    "fullname": "www.google.com/lucky",
-    "pattern": "http://www.google.com/search?q={{query}}&btnI",
+    "fullname": "duckduckgo.com/ducky",
+    "pattern": "https://duckduckgo.com/?q=%21+{{query}}",
     "bangs": ["?"]
   },
   {
@@ -63,11 +63,16 @@ config = [
     "fullname": "publicwww.org",
     "pattern": "https://publicwww.com/websites/{{query}}/",
     "bangs": ["www"]
+  },
+  {
+    "fullname": "tineye.com",
+    "pattern": "https://www.tineye.com/parse?url={{query}}/",
+    "bangs": ["img", "t"]
   }
 ];
 
 
-default_template = config[0].pattern;
+default_template = config[1].pattern;
 
 bangs = {};
 
