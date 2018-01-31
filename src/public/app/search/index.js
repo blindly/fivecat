@@ -9,6 +9,16 @@ config = [
   {
     "fullname": "duckduckgo.com/ducky",
     "pattern": "https://duckduckgo.com/?q=%21+{{query}}",
+    "bangs": ["dky"]
+  },
+  {
+    "fullname": "google.com/lucky",
+    "pattern": "https://www.google.com/search?q={{query}}&btnI",
+    "bangs": [">>"]
+  },
+  {
+    "fullname": "google.com/browsebyName",
+    "pattern": "https://www.google.com/search?ie=UTF-8&sourceid=navclient&gfns=1&q={{query}}",
     "bangs": ["?"]
   },
   {
@@ -82,7 +92,7 @@ config = [
 ];
 
 
-default_template = config[1].pattern;
+default_template = config[3].pattern;
 
 bangs = {};
 
