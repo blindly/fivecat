@@ -12,6 +12,11 @@ config = [
     "bangs": ["?"]
   },
   {
+    "fullname": "wolframalpha.com",
+    "pattern": "https://www.wolframalpha.com/input/?i={{query}}",
+    "bangs": ["wa"]
+  },
+  {
     "fullname": "www.wikipedia.org",
     "pattern": "https://www.wikipedia.org/w/index.php?search={{query}}",
     "bangs": ["w", "wiki"]
