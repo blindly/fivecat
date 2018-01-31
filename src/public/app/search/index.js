@@ -60,7 +60,7 @@ config = [
     "bangs": ["r", "rd"]
   }, {
     "fullname": "developer.mozilla.org",
-    "pattern": "https://developer.mozilla.org/en-US/search?q={{query}}&topic=api&topic=css&topic=canvas&topic=html&topic=http&topic=js&topic=mobile&topic=apps&topic=svg&topic=webdev&topic=webext&topic=webgl",
+    "pattern": "https://developer.mozilla.org/en-US/search?q={{query}}",
     "bangs": ["mdn"]
   }, {
     "fullname": "gotourl",
