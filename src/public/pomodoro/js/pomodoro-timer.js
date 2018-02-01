@@ -34,7 +34,7 @@ var isCanNotify = false;
 var isNotifyEnabled = true;
 var currentNotification;
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   beginRender();
 
@@ -70,7 +70,7 @@ function initTimer() {
 
   updateSound();
 
-  $('.listen-guestures').on('click', function() {
+  $('.listen-guestures').on('click', function () {
     onGuestureFixAudio();
   });
 
@@ -79,13 +79,13 @@ function initTimer() {
 
 // Trick toplay sounds on mobile
 function onGuestureFixAudio() {
-  if(!isGestureAquired) {
+  if (!isGestureAquired) {
     audio.play();
     audio.pause();
-    audio.currentTime=0;
+    audio.currentTime = 0;
     unmuteAudio.play();
     unmuteAudio.pause();
-    unmuteAudio.currentTime=0;
+    unmuteAudio.currentTime = 0;
 
     isGestureAquired = true;
   }
@@ -93,7 +93,7 @@ function onGuestureFixAudio() {
 
 function onSoundToggle() {
 
-  if(isSoundEnabled) {
+  if (isSoundEnabled) {
     isSoundEnabled = false;
   } else {
     isSoundEnabled = true;
@@ -104,15 +104,15 @@ function onSoundToggle() {
 }
 
 function playClick() {
-  if(isSoundEnabled) {
+  if (isSoundEnabled) {
     unmuteAudio.pause();
-    unmuteAudio.currentTime=0;
+    unmuteAudio.currentTime = 0;
     unmuteAudio.play();
   }
 }
 
 function updateSound() {
-  if(isSoundEnabled) {
+  if (isSoundEnabled) {
     $('#alarmButton').removeClass('btn-muted');
     $('#alarmButton > span > i.toggle-status').addClass('hidden');
   } else {
@@ -123,10 +123,10 @@ function updateSound() {
 
 function onNotifyToggle() {
 
-  if(!isCanNotify) {
+  if (!isCanNotify) {
     requestNotification();
   } else {
-    if(isNotifyEnabled) {
+    if (isNotifyEnabled) {
       isNotifyEnabled = false;
     } else {
       isNotifyEnabled = true;
@@ -143,15 +143,15 @@ function onNotifyToggle() {
 
 function updateNotify() {
 
-  if(currentNotification) {
+  if (currentNotification) {
     currentNotification.close();
   }
 
-  if(isCanNotify) {
+  if (isCanNotify) {
 
     $('#notifyButton > span > i.fa-stack-on').removeClass('accent');
 
-    if(isNotifyEnabled) {
+    if (isNotifyEnabled) {
       $('#notifyButton > span > i.toggle-status').addClass('hidden');
     } else {
       $('#notifyButton > span > i.toggle-status').removeClass('hidden');
@@ -202,20 +202,20 @@ function requestNotification() {
 
 function playNotification() {
 
-  if(currentNotification) {
+  if (currentNotification) {
     currentNotification.close();
   }
 
-  if(isCanNotify && isNotifyEnabled) {
+  if (isCanNotify && isNotifyEnabled) {
     currentNotification = new Notification('Hey, Time\'s up!', {
-      body: 'Your '+formatTime(gMinutes)+':'+formatTime(gSeconds)+' minutes timer has ended.',
+      body: 'Your ' + formatTime(gMinutes) + ':' + formatTime(gSeconds) + ' minutes timer has ended.',
       icon: 'images/pt-icon-md.png'
     });
   }
 }
 
-function onPomodoroTimer(isUseLong){
-
+function onPomodoroTimer(isUseLong) {
+  
   stopTimer();
 
   $('#shortButton').removeClass('btn-success');
@@ -228,7 +228,7 @@ function onPomodoroTimer(isUseLong){
   $('#pomodoroButton').addClass('btn-success');
   $('#pomodoroButtonDropdown').addClass('btn-success');
 
-  if(isUseLong) {
+  if (isUseLong) {
     gHours = 0;
     gMinutes = 55;
     gSeconds = 0;
@@ -246,11 +246,13 @@ function onPomodoroTimer(isUseLong){
 
   resetTimer();
   startTimer();
+  
+  startIcon();
 
 }
 
-function onShortTimer(){
-
+function onShortTimer() {
+  
   stopTimer();
 
   $('#pomodoroButton').removeClass('btn-success');
@@ -271,11 +273,13 @@ function onShortTimer(){
 
   resetTimer();
   startTimer();
+  
+  startIcon(true);
 
 }
 
-function onLongTimer(){
-
+function onLongTimer() {
+  
   stopTimer();
 
   $('#pomodoroButton').removeClass('btn-success');
@@ -296,65 +300,71 @@ function onLongTimer(){
 
   resetTimer(true);
   startTimer();
+  
+  startIcon(true);
+
 
 }
 
-function onStartTimer(){
+function onStartTimer() {
+  startIcon();
   startTimer();
 };
 
-function onStopTimer(){
+function onStopTimer() {
   stopTimer();
 };
 
-function onResetTimer(){
+function onResetTimer() {
   stopTimer();
   resetTimer(true);
 }
 
 function afterStop() {
 
-    $('#restartButton').addClass('hidden');
-    $('#startButton').removeClass('hidden');
-    $('#stopButton').addClass('hidden');
+  $('#restartButton').addClass('hidden');
+  $('#startButton').removeClass('hidden');
+  $('#stopButton').addClass('hidden');
+  
+  stopIcon();
 
 }
 
 function afterStart() {
 
-    $('#restartButton').removeClass('hidden');
-    $('#startButton').addClass('hidden');
+  $('#restartButton').removeClass('hidden');
+  $('#startButton').addClass('hidden');
 
-    if(isStopEnabled) {
-        $('#stopButton').removeClass('hidden');
-    }
-
+  if (isStopEnabled) {
+    $('#stopButton').removeClass('hidden');
+  }
+  
 }
 
 function afterComplete() {
 
-    $('#restartButton').removeClass('hidden');
-    $('#startButton').addClass('hidden');
-    $('#stopButton').addClass('hidden');
+  $('#restartButton').removeClass('hidden');
+  $('#startButton').addClass('hidden');
+  $('#stopButton').addClass('hidden');
 
 }
 
 
-function playAlarm(){
-  if(isSoundEnabled) {
+function playAlarm() {
+  if (isSoundEnabled) {
     audio.pause();
-    audio.currentTime=0;
+    audio.currentTime = 0;
     audio.play();
   }
 }
 
 function startTimer() {
-  if(!isRunTimer) {
+  if (!isRunTimer) {
 
     beginTime = Date.now();
 
     // give 400 ms delay
-    beginTime+= (400);
+    beginTime += (400);
 
     isRunTimer = true;
     afterStart();
@@ -362,24 +372,24 @@ function startTimer() {
 }
 
 function stopTimer() {
-  if(isRunTimer) {
+  if (isRunTimer) {
     timerDuration = remainingTime;
 
     isRunTimer = false;
 
-    if(remainingTime < 1000) {
-        afterComplete();
+    if (remainingTime < 1000) {
+      afterComplete();
     } else {
-        afterStop();
+      afterStop();
     }
   }
 }
 
-function resetTimer(forceAnimate){
+function resetTimer(forceAnimate) {
 
-  timerDuration = (gHours*60*60*1000)+
-                  (gMinutes*60*1000)+
-                  (gSeconds*1000);
+  timerDuration = (gHours * 60 * 60 * 1000) +
+    (gMinutes * 60 * 1000) +
+    (gSeconds * 1000);
 
   remainingTime = timerDuration;
 
@@ -388,15 +398,15 @@ function resetTimer(forceAnimate){
 }
 
 function formatTime(intergerValue) {
-  return intergerValue > 9 ? intergerValue.toString():'0'+intergerValue.toString();
+  return intergerValue > 9 ? intergerValue.toString() : '0' + intergerValue.toString();
 }
 
-function decrementTimer(){
+function decrementTimer() {
 
   var lastTimeElased = timeElapsed;
   var lastRemainingTime = remainingTime;
 
-  if(remainingTime<1000){
+  if (remainingTime < 1000) {
     remainingTime = 0;
 
     stopTimer();
@@ -408,33 +418,33 @@ function decrementTimer(){
     remainingTime = timerDuration - timeElapsed;
   }
 
-  if(isDebug) {
+  if (isDebug) {
     console.log('----');
     console.log('timeElapsed: ' + timeElapsed);
-    console.log('timeElapsed(sec): ' + (timeElapsed/1000));
+    console.log('timeElapsed(sec): ' + (timeElapsed / 1000));
     console.log('timeDelta: ' + (timeElapsed - lastTimeElased));
-    console.log('remainingTime: '+ remainingTime);
+    console.log('remainingTime: ' + remainingTime);
   }
 
   displayTimer();
 }
 
-function displayTimer(forceAnimate){
+function displayTimer(forceAnimate) {
 
-  var deltaTime=remainingTime;
+  var deltaTime = remainingTime;
 
-  var hoursValue=Math.floor(deltaTime/(1000*60*60));
+  var hoursValue = Math.floor(deltaTime / (1000 * 60 * 60));
   hoursValue = hoursValue > 0 ? hoursValue : 0;
-  deltaTime=deltaTime%(1000*60*60);
+  deltaTime = deltaTime % (1000 * 60 * 60);
 
-  var minutesValue=Math.floor(deltaTime/(1000*60));
+  var minutesValue = Math.floor(deltaTime / (1000 * 60));
   minutesValue = minutesValue > 0 ? minutesValue : 0;
-  deltaTime=deltaTime%(1000*60);
+  deltaTime = deltaTime % (1000 * 60);
 
-  var secondsValue=Math.floor(deltaTime/(1000));
+  var secondsValue = Math.floor(deltaTime / (1000));
   secondsValue = secondsValue > 0 ? secondsValue : 0;
 
-  if(isDebug) {
+  if (isDebug) {
     console.log('----');
     console.log('hoursValue: ' + hoursValue);
     console.log('minutesValue: ' + minutesValue);
@@ -449,11 +459,11 @@ function animateTime(remainingHours, remainingMinutes, remainingSeconds, forceAn
 
   var $hoursValue = $('#hoursValue');
   var $minutesValue = $('#minutesValue');
-  var $secondsValue =   $('#secondsValue');
+  var $secondsValue = $('#secondsValue');
 
   var $hoursNext = $('#hoursNext');
   var $minutesNext = $('#minutesNext');
-  var $secondsNext =   $('#secondsNext');
+  var $secondsNext = $('#secondsNext');
 
   // position
   $hoursValue.css('top', '0em');
@@ -481,25 +491,37 @@ function animateTime(remainingHours, remainingMinutes, remainingSeconds, forceAn
   $secondsNext.text(secondsString);
 
   // set and animate
-  if(forceAnimate || oldHoursString !== hoursString) {
+  if (forceAnimate || oldHoursString !== hoursString) {
     $hoursValue.stop();
     $hoursNext.stop();
-    $hoursValue.animate({top: '-1em'});
-    $hoursNext.animate({top: '-1em'});
+    $hoursValue.animate({
+      top: '-1em'
+    });
+    $hoursNext.animate({
+      top: '-1em'
+    });
   }
 
-  if(forceAnimate || oldMinutesString !== minutesString) {
+  if (forceAnimate || oldMinutesString !== minutesString) {
     $minutesValue.stop();
     $minutesNext.stop();
-    $minutesValue.animate({top: '-1em'});
-    $minutesNext.animate({top: '-1em'});
+    $minutesValue.animate({
+      top: '-1em'
+    });
+    $minutesNext.animate({
+      top: '-1em'
+    });
   }
 
-  if(forceAnimate || oldSecondsString !== secondsString) {
+  if (forceAnimate || oldSecondsString !== secondsString) {
     $secondsValue.stop();
     $secondsNext.stop();
-    $secondsValue.animate({top: '-1em'});
-    $secondsNext.animate({top: '-1em'});
+    $secondsValue.animate({
+      top: '-1em'
+    });
+    $secondsNext.animate({
+      top: '-1em'
+    });
   }
 }
 
@@ -510,13 +532,13 @@ function beginRender() {
   expectedRenderTime = beginRenderTime = Date.now();
   lastRenderTime = currentRenderTime = Date.now();
 
-  renderHandle = setTimeout(function() {
+  renderHandle = setTimeout(function () {
     render();
   }, loopRenderInterval);
 }
 
 function clearRender() {
-  if(renderHandle) {
+  if (renderHandle) {
     clearTimeout(renderHandle);
   }
 }
@@ -524,12 +546,12 @@ function clearRender() {
 function render() {
 
   // do stuff here
-  if(isRunTimer) {
+  if (isRunTimer) {
     decrementTimer();
   }
 
   // ideal clock
-  expectedRenderTime+=loopRenderInterval;
+  expectedRenderTime += loopRenderInterval;
 
   // current clocks
   lastRenderTime = currentRenderTime;
@@ -541,23 +563,44 @@ function render() {
   var nextInterval = (loopRenderInterval + deltaRenderTime);
   var adjustedNextInterval = nextInterval - nextIntervalAdjust;
 
-  if(isDebug) {
+  if (isDebug) {
     console.log('----');
-    console.log('expectedRenderTime: ' + (expectedRenderTime%(60*1000))/1000);
-    console.log('currentRenderTime: ' + (currentRenderTime%(60*1000))/1000);
-    console.log('lastRenderTime: ' + (lastRenderTime%(60*1000))/1000);
+    console.log('expectedRenderTime: ' + (expectedRenderTime % (60 * 1000)) / 1000);
+    console.log('currentRenderTime: ' + (currentRenderTime % (60 * 1000)) / 1000);
+    console.log('lastRenderTime: ' + (lastRenderTime % (60 * 1000)) / 1000);
     console.log('drift: ' + ((currentRenderTime) - (expectedRenderTime)));
-    console.log('deltaRenderTime: '+ deltaRenderTime);
-    console.log('nextInterval: '+ nextInterval);
-    console.log('adjustedNextInterval: '+ adjustedNextInterval);
+    console.log('deltaRenderTime: ' + deltaRenderTime);
+    console.log('nextInterval: ' + nextInterval);
+    console.log('adjustedNextInterval: ' + adjustedNextInterval);
   }
 
   // schedule next render
-  if(renderHandle) {
+  if (renderHandle) {
     clearTimeout(renderHandle);
 
-    renderHandle = setTimeout(function() {
+    renderHandle = setTimeout(function () {
       render();
     }, nextInterval);
   }
+}
+
+function startIcon(alt) {
+  var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  link.type = 'image/x-icon';
+  link.rel = 'shortcut icon';
+  
+  if (alt)
+    link.href = '/pomodoro/images/break.png';
+  else
+    link.href = '/pomodoro/images/work.png';
+
+  document.getElementsByTagName('head')[0].appendChild(link);
+}
+
+function stopIcon() {
+  var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  link.type = 'image/x-icon';
+  link.rel = 'shortcut icon';
+  link.href = '/pomodoro/images/stop.png';
+  document.getElementsByTagName('head')[0].appendChild(link);
 }
