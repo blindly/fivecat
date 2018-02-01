@@ -27,8 +27,8 @@ var renderHandle;
 
 var isSoundEnabled = true;
 var isGestureAquired = false;
-var audio = new Audio('../sounds/beep.mp3');
-var unmuteAudio = new Audio('../sounds/unmute.mp3');
+var audio = new Audio('/pomodoro/sounds/beep.mp3');
+var unmuteAudio = new Audio('/pomodoro/sounds/unmute.mp3');
 
 var isCanNotify = false;
 var isNotifyEnabled = true;
