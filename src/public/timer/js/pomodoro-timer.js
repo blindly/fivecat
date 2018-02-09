@@ -354,7 +354,19 @@ function playAlarm() {
   if (isSoundEnabled) {
     audio.pause();
     audio.currentTime = 0;
-    audio.play();
+    //audio.play();
+
+    var playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Playback started
+      })
+      .catch(error => {
+        // Playback failed
+        console.log("Playback failed");
+      });
+    }
+
   }
 }
 
