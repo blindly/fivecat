@@ -8,6 +8,8 @@
         {href: '/read/saved', text: 'saved links'},
       
         {href: '/read/tech', text: 'technology'},
+        {href: '/read/programming', text: 'programming'},
+
         {href: '/read/enterprise', text: 'enterprise'},
 
         {href: '/read/week', text: 'top weekly'},
