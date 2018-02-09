@@ -602,9 +602,9 @@ function startIcon(alt) {
   link.rel = 'shortcut icon';
   
   if (alt)
-    link.href = '/pomodoro/images/break.png';
+    link.href = '/timer/images/break.png';
   else
-    link.href = '/pomodoro/images/work.png';
+    link.href = '/timer/images/work.png';
 
   document.getElementsByTagName('head')[0].appendChild(link);
 }
@@ -613,6 +613,6 @@ function stopIcon() {
   var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
   link.type = 'image/x-icon';
   link.rel = 'shortcut icon';
-  link.href = '/pomodoro/images/stop.png';
+  link.href = '/timer/images/stop.png';
   document.getElementsByTagName('head')[0].appendChild(link);
 }
