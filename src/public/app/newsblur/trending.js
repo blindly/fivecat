@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
         
       if ( show === true ) {
 
-        //let save = "<a href='https://api.fivecat.xyz/api/index.php/bookmarks/add?url=" + link + "' >save</a>";
         let save = "<span class='pull-right'><a href=\"javascript:save_bookmark('" + link + "')\" ><i class='fa fa-bookmark' aria-hidden=\"true\"></i></a></span>";
         var favicon = "<img style='width: 20px !important; margin-bottom: 0 !important; padding-right: 10px' src='" + favicon_img + "'/>";
         var article = "<article><p><a class='title' target='_blank' rel='noopener' href='" + link + "'>" + favicon + title + "</a>"+ save +"</p></article>";

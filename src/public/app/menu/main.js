@@ -17,7 +17,7 @@
         {href: '/read/know', text: 'know this!'},
         {href: '/read/lifeprotips', text: 'life tips'},
         {href: '/read/learn', text: 'learn'},
-        {href: '/read/life', text: 'life advice'},
+        //{href: '/read/life', text: 'life advice'},
 
         //{href: '/read/chromeos', text: 'chrome os'},
         {href: '/read/browsers', text: 'browsers'},
@@ -25,9 +25,9 @@
 
         {href: '/read/password', text: 'password'},
         {href: '/read/gaming', text: 'gaming'},
-        {href: '/read/data', text: 'interesting'},
-        {href: '/read/korea', text: 'korea'},
-        {href: '/read/kdrama', text: 'kdrama'},
+        //{href: '/read/data', text: 'interesting'},
+        //{href: '/read/korea', text: 'korea'},
+        //{href: '/read/kdrama', text: 'kdrama'},
         {href: '/read/jokes', text: 'jokes'},
         //
     ];
