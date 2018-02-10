@@ -2,5 +2,8 @@
   "dependencies": {
     "harp": "^0.21.0",
     "typescript": "^2.4.1"
+  },
+  "devDependencies": {
+    "cypress": "^1.4.2"
   }
 }
