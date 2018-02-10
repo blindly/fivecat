@@ -23,38 +23,38 @@
   <!-- Emojis -->
   <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css" />
   <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-  
+
   <!-- Icons -->
   <link rel="icon" href="/images/avatar-transparent.png" type="image/x-icon" />
   <link rel="shortcut icon" href="/images/avatar-transparent.png" type="image/x-icon" />
-  
+
   <!-- iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="apple-touch-icon" href="/images/avatar.png">
-  
+
   <!-- Microsoft -->
-  <meta name="application-name" content="Fivecat"/>
-  <meta name="msapplication-square70x70logo" content="/images/avatar.png"/>
-  <meta name="msapplication-square150x150logo" content="/images/avatar.png"/>
-  <meta name="msapplication-wide310x150logo" content="/images/avatar.png"/>
-  <meta name="msapplication-square310x310logo" content="/images/avatar.png"/>
-  
+  <meta name="application-name" content="Fivecat" />
+  <meta name="msapplication-square70x70logo" content="/images/avatar.png" />
+  <meta name="msapplication-square150x150logo" content="/images/avatar.png" />
+  <meta name="msapplication-wide310x150logo" content="/images/avatar.png" />
+  <meta name="msapplication-square310x310logo" content="/images/avatar.png" />
+
   <!-- Manifest -->
   <link rel="manifest" href="/manifest.json">
 
   <!-- OpenSearch -->
   <link rel="search" type="application/opensearchdescription+xml" title="fivecat" href="/app/search/opensearch.xml">
-  
+
   <!-- No Referrer -->
   <meta name="referrer" content="no-referrer" />
-  
+
   <!-- SEO -->
   <meta name="description" content="A search engine and news aggregator with an attitude" />
-  
+
   <!-- Scrolls -->
   <style>
     html {
-      overflow:auto;
+      overflow: auto;
     }
   </style>
 
@@ -68,8 +68,12 @@
   <!-- Header -->
   <section id="header">
     <header>
-      <span class="image avatar"><img src="/images/avatar.png" alt="" /></span>
-      <h1 id="logo"><a href="/">fivecat</a></h1>
+      <span class="image avatar">
+        <img src="/images/avatar.png" alt="" />
+      </span>
+      <h1 id="logo">
+        <a href="/">fivecat</a>
+      </h1>
       <p>A news aggregator</p>
 
     </header>
@@ -80,8 +84,12 @@
     <!-- Footer -->
     <footer>
       <ul class="icons">
-        <li>Logo made with <a href="https://www.designevo.com/" title="Free Online Logo Maker">DesignEvo</a></li>
-        <li>Design by <a href="https://www.html5up.net" title="Responsive HTML5 and CSS3 site templates">HTML5 UP!</a></li>
+        <li>Logo made with
+          <a href="https://www.designevo.com/" title="Free Online Logo Maker">DesignEvo</a>
+        </li>
+        <li>Design by
+          <a href="https://www.html5up.net" title="Responsive HTML5 and CSS3 site templates">HTML5 UP!</a>
+        </li>
       </ul>
     </footer>
   </section>
@@ -110,8 +118,12 @@
         <div class="container" id="search">
           <form method="get" action="/">
             <input type="text" name="q" placeholder="Search the web" autofocus autocomplete="off" />
-  
+
           </form>
+
+          <!-- Affirmation -->
+          <section class="container" id="affirmation"></section>
+
         </div>
 
         <!-- News -->
@@ -137,6 +149,7 @@
 
   <script src="/app/functions/functions.js"></script>
   <script src="/app/api/link_api.js"></script>
+  <script src="/app/api/affirmation.js"></script>
   <!-- Menu -->
   <script src="/app/menu/main.js"></script>
 
