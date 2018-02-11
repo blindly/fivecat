@@ -11,11 +11,13 @@ config = [
     "pattern": "https://duckduckgo.com/?q=%21+{{query}}",
     "bangs": ["dky"]
   },
+  /*
   {
     "fullname": "google.com/lucky",
     "pattern": "https://www.google.com/search?q={{query}}&btnI",
-    "bangs": [">"]
+    "bangs": ["l"]
   },
+  */
   {
     "fullname": "google.com/browsebyName",
     "pattern": "https://www.google.com/search?ie=UTF-8&sourceid=navclient&gfns=1&q={{query}}",
