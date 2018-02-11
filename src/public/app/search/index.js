@@ -2,6 +2,11 @@ var bang, bangs, config, default_template, entry, get_query, i, j, len, len1, qu
 
 config = [
   {
+    "fullname": "google.com/browsebyName",
+    "pattern": "https://www.google.com/search?ie=UTF-8&sourceid=navclient&gfns=1&q={{query}}",
+    "bangs": ["?"]
+  },
+  {
     "fullname": "www.google.com",
     "pattern": "https://www.google.com/search?q={{query}}",
     "bangs": ["g", "gus"]
@@ -18,11 +23,6 @@ config = [
     "bangs": ["l"]
   },
   */
-  {
-    "fullname": "google.com/browsebyName",
-    "pattern": "https://www.google.com/search?ie=UTF-8&sourceid=navclient&gfns=1&q={{query}}",
-    "bangs": ["?"]
-  },
   {
     "fullname": "wolframalpha.com",
     "pattern": "https://www.wolframalpha.com/input/?i={{query}}",
@@ -99,7 +99,7 @@ config = [
 ];
 
 
-default_template = config[3].pattern;
+default_template = config[0].pattern;
 
 bangs = {};
 
