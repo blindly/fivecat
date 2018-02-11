@@ -1,14 +1,73 @@
-<script>
-  if (typeof (stockdio_events) == "undefined") {
-    stockdio_events = true;
-    var stockdio_eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-    var stockdio_eventer = window[stockdio_eventMethod];
-    var stockdio_messageEvent = stockdio_eventMethod == "attachEvent" ? "onmessage" : "message";
-    stockdio_eventer(stockdio_messageEvent, function (e) {
-      if (typeof (e.data) != "undefined" && typeof (e.data.method) != "undefined") {
-        eval(e.data.method);
+<html>
+
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 
+    <form method="get">
+      <input type="text" id="q" name="q" placeholder="Enter Stock Ticker" autofocus autocomplete="off" />
+
+    </form>
+  -->
+
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" id="q" placeholder="Enter Stock Symbol">
+      </div>
+    </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        var ticker = getQueryVariable("q");
+        loadNews(ticker);
+      });
+
+      function loadNews(ticker) {
+        var url =
+          "https://api.stockdio.com/visualization/financial/charts/v1/News?app-key=53A34555611340E4B6929122CC2F335A&symbol=" +
+          ticker +
+          "&includeDescription=false&imageWidth=40&imageHeight=40&palette=Financial-Light&title=News&onload=st_81c0184ac7fd49baa0d0cd694b5a5288";
+
+        document.getElementById('st_81c0184ac7fd49baa0d0cd694b5a5288').src = url;
       }
-    }, false);
-  }
-</script>
-<iframe id='st_81c0184ac7fd49baa0d0cd694b5a5288' frameBorder='0' scrolling='no' width='100%' height='100%' src='https://api.stockdio.com/visualization/financial/charts/v1/News?app-key=53A34555611340E4B6929122CC2F335A&symbol=AAPL&includeDescription=false&imageWidth=40&imageHeight=40&palette=Financial-Light&title=News&onload=st_81c0184ac7fd49baa0d0cd694b5a5288'></iframe>
+
+      function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+          var pair = vars[i].split("=");
+          if (pair[0] == variable) {
+            return pair[1];
+          }
+        }
+        return (false);
+      }
+    </script>
+
+    <script>
+      if (typeof (stockdio_events) == "undefined") {
+        stockdio_events = true;
+        var stockdio_eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var stockdio_eventer = window[stockdio_eventMethod];
+        var stockdio_messageEvent = stockdio_eventMethod == "attachEvent" ? "onmessage" : "message";
+        stockdio_eventer(stockdio_messageEvent, function (e) {
+          if (typeof (e.data) != "undefined" && typeof (e.data.method) != "undefined") {
+            eval(e.data.method);
+          }
+        }, false);
+      }
+    </script>
+    <!-- <iframe id='st_81c0184ac7fd49baa0d0cd694b5a5288' frameBorder='0' scrolling='no' width='100%' height='100%' src='https://api.stockdio.com/visualization/financial/charts/v1/News?app-key=53A34555611340E4B6929122CC2F335A&symbol=NFLX&includeDescription=false&imageWidth=40&imageHeight=40&palette=Financial-Light&title=News&onload=st_81c0184ac7fd49baa0d0cd694b5a5288'></iframe> -->
+
+    <iframe id='st_81c0184ac7fd49baa0d0cd694b5a5288' frameBorder='0' scrolling='no' width='100%' height='100%'></iframe>
+
+  </div>
+</body>
+
+</html>
