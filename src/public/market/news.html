@@ -16,19 +16,29 @@
     </form>
   -->
 
-    <form>
+    <form action="#" onsubmit="return false;">
       <div class="form-group">
-        <input type="text" class="form-control" id="q" placeholder="Enter Stock Symbol">
+        <input type="text" class="form-control" id="q" placeholder="Enter Stock Symbol" >
       </div>
     </form>
 
     <script>
+      document.onkeydown = function () {
+        if (window.event.keyCode == '13') {
+          var ticker = document.getElementById('q');
+          //var ticker = getQueryVariable("q");
+          loadNews(ticker.value);
+        }
+      }
+
       document.addEventListener("DOMContentLoaded", function (event) {
         var ticker = getQueryVariable("q");
         loadNews(ticker);
       });
 
       function loadNews(ticker) {
+
+        // document.getElementById('st_81c0184ac7fd49baa0d0cd694b5a5288').src =
         var url =
           "https://api.stockdio.com/visualization/financial/charts/v1/News?app-key=53A34555611340E4B6929122CC2F335A&symbol=" +
           ticker +
