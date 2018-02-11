@@ -1,33 +1,9 @@
 (function(){
     // All items we'd like to add
     var navItems = [
-        {href: '/market', text: 'trending'},
-        {href: '/read/startups', text: 'startups'},
-        {href: '/read/webdev', text: 'web dev'},
-        {href: '/read/crypto', text: 'altcoin'},
-      
-        {href: '/read/programming', text: 'programming'},
-        {href: '/read/enterprise', text: 'enterprise'},
-
-        {href: '/read/week', text: 'top weekly'},
-        {href: '/read/bookmarks', text: 'bookmarks'},
-      
-        {href: '/read/know', text: 'know this!'},
-        {href: '/read/lifeprotips', text: 'life tips'},
-        {href: '/read/learn', text: 'learn'},
-        {href: '/read/life', text: 'life advice'},
-
-        //{href: '/read/chromeos', text: 'chrome os'},
-        {href: '/read/browsers', text: 'browsers'},
-        {href: '/read/netsec', text: 'Network'},
-
-
-        {href: '/read/password', text: 'password'},
-        {href: '/read/gaming', text: 'gaming'},
-        {href: '/read/data', text: 'interesting'},
-        {href: '/read/korea', text: 'korea'},
-        {href: '/read/kdrama', text: 'kdrama'},
-        {href: '/read/jokes', text: 'jokes'},
+        {href: '/market', text: 'home'},
+        {href: '/market/advanced', text: 'advanced'},
+        {href: '/tmp/test', text: 'test'},
         //
     ];
 
@@ -58,6 +34,7 @@
         // Set properties on anchor
         navLink.href = navItems[i].href;
         navLink.innerHTML = navItems[i].text.toUpperCase();
+        navLink.target = "myFrame";
 
         // Add anchor to list item, and list item to list
         navItem.appendChild(navLink);

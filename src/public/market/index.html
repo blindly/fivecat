@@ -1,38 +1,107 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 
 <head>
-
+  <meta charset="utf-8" />
   <title>
     Market
   </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Created from SCSS -->
+  <link rel="stylesheet" href="main.css" />
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+
+  <!-- Loading screen -->
+  <link rel="stylesheet" href="/app/loading/loading.css" />
+
+  <!-- Emojis -->
+  <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+  <!-- Icons -->
+  <link rel="icon" href="/images/avatar-transparent.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="/images/avatar-transparent.png" type="image/x-icon" />
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/images/avatar.png">
+
+  <!-- Microsoft -->
+  <meta name="application-name" content="Fivecat" />
+  <meta name="msapplication-square70x70logo" content="/images/avatar.png" />
+  <meta name="msapplication-square150x150logo" content="/images/avatar.png" />
+  <meta name="msapplication-wide310x150logo" content="/images/avatar.png" />
+  <meta name="msapplication-square310x310logo" content="/images/avatar.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- OpenSearch -->
+  <link rel="search" type="application/opensearchdescription+xml" title="fivecat" href="/app/search/opensearch.xml">
+
+  <!-- No Referrer -->
+  <meta name="referrer" content="no-referrer" />
+
+  <!-- SEO -->
+  <meta name="description" content="A search engine and news aggregator with an attitude" />
+
+  <!-- Scrolls -->
+  <style>
+    html {
+      overflow: auto;
+    }
+  </style>
 
 </head>
 
 <body>
 
-  <!-- TradingView Widget BEGIN -->
-  <span id="tradingview-copyright">
-    <a ref="nofollow noopener" target="_blank" href="http://www.tradingview.com" style="color: rgb(173, 174, 176); font-family: &quot;Trebuchet MS&quot;, Tahoma, Arial, sans-serif; font-size: 13px;">Market Movers by
-      <span style="color: #3BB3E4">TradingView</span>
-    </a>
-  </span>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js">
-    {
-      "exchange": "US",
-      "showChart": true,
-      "locale": "en",
-      "width": "100%",
-      "height": "100%",
-      "plotLineColorGrowing": "rgba(60, 188, 152, 1)",
-      "plotLineColorFalling": "rgba(255, 74, 104, 1)",
-      "gridLineColor": "rgba(242, 242, 242, 1)",
-      "scaleFontColor": "rgba(218, 221, 224, 1)",
-      "belowLineFillColorGrowing": "rgba(60, 188, 152, 0.05)",
-      "belowLineFillColorFalling": "rgba(255, 74, 104, 0.05)",
-      "symbolActiveColor": "rgba(242, 250, 254, 1)"
-    }
-  </script>
-  <!-- TradingView Widget END -->
+  <!-- Loader -->
+  <div class="loader"></div>
+
+  <div class="open">
+    <span class="cls"></span>
+    <span>
+      <ul class="sub-menu ">
+        <li>
+          <a href="/market/advanced" target="myFrame">Graph</a>
+        </li>
+        <li>
+          <a href="/market/crypto" target="myFrame">Crypto</a>
+        </li>
+      </ul>
+    </span>
+    <span class="cls"></span>
+  </div>
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <iframe name="myFrame" id="myFrame" style="width: 100%; height: 80vh;" src="/market/advanced" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/jquery.min.js"></script>
+
+  <!-- Loading -->
+  <script src="/app/loading/loading.js"></script>
+
+  <!-- Menu -->
+  <script src="header.js"></script>
 
 </body>
 
