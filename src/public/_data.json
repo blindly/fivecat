@@ -1,8 +1,11 @@
  {
    "index": {
-     "title": "Now Trending"
+     "title": ""
    },
    "404": {
+    "title": "Start Page"
+  },
+  "save": {
     "title": "Start Page"
   }
  }

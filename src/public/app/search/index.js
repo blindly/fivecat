@@ -14,7 +14,7 @@ config = [
   {
     "fullname": "google.com/lucky",
     "pattern": "https://www.google.com/search?q={{query}}&btnI",
-    "bangs": [">>"]
+    "bangs": [">"]
   },
   {
     "fullname": "google.com/browsebyName",
@@ -25,6 +25,11 @@ config = [
     "fullname": "wolframalpha.com",
     "pattern": "https://www.wolframalpha.com/input/?i={{query}}",
     "bangs": ["wa"]
+  },
+  {
+    "fullname": "fivecat.xyz/save",
+    "pattern": "https://fivecat.xyz/save?bookmark={{query}}",
+    "bangs": [">>"]
   },
   {
     "fullname": "www.wikipedia.org",
@@ -53,7 +58,7 @@ config = [
   }, {
     "fullname": "www.bing.com",
     "pattern": "https://www.bing.com/search?q={{query}}",
-    "bangs": ["b", "bing"]
+    "bangs": ["bing"]
   }, {
     "fullname": "www.reddit.com",
     "pattern": "https://www.reddit.com/r/{{query}}",
